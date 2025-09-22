@@ -1,0 +1,15 @@
+/home/vlados/ros2_ws/install/ias0220_250620/share/ament_index/resource_index/package_run_dependencies/ias0220_250620
+/home/vlados/ros2_ws/install/ias0220_250620/share/ament_index/resource_index/parent_prefix_path/ias0220_250620
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/environment/ament_prefix_path.sh
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/environment/ament_prefix_path.dsv
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/environment/path.sh
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/environment/path.dsv
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/local_setup.bash
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/local_setup.sh
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/local_setup.zsh
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/local_setup.dsv
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/package.dsv
+/home/vlados/ros2_ws/install/ias0220_250620/share/ament_index/resource_index/packages/ias0220_250620
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/cmake/ias0220_250620Config.cmake
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/cmake/ias0220_250620Config-version.cmake
+/home/vlados/ros2_ws/install/ias0220_250620/share/ias0220_250620/package.xml

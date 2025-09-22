@@ -1,0 +1,15 @@
+/home/vlados/ros2_ws/install/lAS0220_250620/share/ament_index/resource_index/package_run_dependencies/lAS0220_250620
+/home/vlados/ros2_ws/install/lAS0220_250620/share/ament_index/resource_index/parent_prefix_path/lAS0220_250620
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/environment/ament_prefix_path.sh
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/environment/ament_prefix_path.dsv
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/environment/path.sh
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/environment/path.dsv
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/local_setup.bash
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/local_setup.sh
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/local_setup.zsh
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/local_setup.dsv
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/package.dsv
+/home/vlados/ros2_ws/install/lAS0220_250620/share/ament_index/resource_index/packages/lAS0220_250620
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/cmake/lAS0220_250620Config.cmake
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/cmake/lAS0220_250620Config-version.cmake
+/home/vlados/ros2_ws/install/lAS0220_250620/share/lAS0220_250620/package.xml

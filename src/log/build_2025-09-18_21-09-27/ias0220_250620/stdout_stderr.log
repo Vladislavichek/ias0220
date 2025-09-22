@@ -1,0 +1,38 @@
+running egg_info
+creating ../build/ias0220_250620/ias0220_250620.egg-info
+writing ../build/ias0220_250620/ias0220_250620.egg-info/PKG-INFO
+writing dependency_links to ../build/ias0220_250620/ias0220_250620.egg-info/dependency_links.txt
+writing entry points to ../build/ias0220_250620/ias0220_250620.egg-info/entry_points.txt
+writing requirements to ../build/ias0220_250620/ias0220_250620.egg-info/requires.txt
+writing top-level names to ../build/ias0220_250620/ias0220_250620.egg-info/top_level.txt
+writing manifest file '../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+reading manifest file '../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vlados/ros2_ws/src/build/ias0220_250620/build
+creating /home/vlados/ros2_ws/src/build/ias0220_250620/build/lib
+creating /home/vlados/ros2_ws/src/build/ias0220_250620/build/lib/ias0220_250620
+copying ias0220_250620/__init__.py -> /home/vlados/ros2_ws/src/build/ias0220_250620/build/lib/ias0220_250620
+running install
+running install_lib
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+copying /home/vlados/ros2_ws/src/build/ias0220_250620/build/lib/ias0220_250620/__init__.py -> /home/vlados/ros2_ws/src/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+byte-compiling /home/vlados/ros2_ws/src/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/share/ament_index
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/share/ament_index/resource_index
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/share/ament_index/resource_index/packages
+copying resource/ias0220_250620 -> /home/vlados/ros2_ws/src/install/ias0220_250620/share/ament_index/resource_index/packages
+copying package.xml -> /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620/launch
+copying launch/task2.launch.py -> /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620/launch
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620/urdf
+copying urdf/myFirst.urdf -> /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620/urdf
+copying urdf/differential_robot.urdf -> /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620/urdf
+creating /home/vlados/ros2_ws/src/install/ias0220_250620/share/ias0220_250620/config
+running install_egg_info
+Copying ../build/ias0220_250620/ias0220_250620.egg-info to /home/vlados/ros2_ws/src/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/vlados/ros2_ws/src/build/ias0220_250620/install.log'

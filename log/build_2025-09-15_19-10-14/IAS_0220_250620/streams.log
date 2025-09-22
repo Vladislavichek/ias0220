@@ -1,0 +1,43 @@
+[0.008s] Invoking command in '/home/vlados/ros2_ws/build/IAS_0220_250620': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ros2_ws/src/IAS_0220_250620 -DCMAKE_INSTALL_PREFIX=/home/vlados/ros2_ws/install/IAS_0220_250620
+[0.056s] -- The C compiler identification is GNU 11.4.0
+[0.103s] -- The CXX compiler identification is GNU 11.4.0
+[0.114s] -- Detecting C compiler ABI info
+[0.185s] -- Detecting C compiler ABI info - done
+[0.198s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.198s] -- Detecting C compile features
+[0.199s] -- Detecting C compile features - done
+[0.204s] -- Detecting CXX compiler ABI info
+[0.288s] -- Detecting CXX compiler ABI info - done
+[0.301s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.301s] -- Detecting CXX compile features
+[0.302s] -- Detecting CXX compile features - done
+[0.306s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.451s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.537s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.579s] WARNING: Package name "IAS_0220_250620" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[0.608s] -- Added test 'lint_cmake' to check CMake code style
+[0.610s] -- Added test 'xmllint' to check XML markup files
+[0.612s] -- Configuring done
+[0.619s] -- Generating done
+[0.622s] -- Build files have been written to: /home/vlados/ros2_ws/build/IAS_0220_250620
+[0.628s] Invoked command in '/home/vlados/ros2_ws/build/IAS_0220_250620' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ros2_ws/src/IAS_0220_250620 -DCMAKE_INSTALL_PREFIX=/home/vlados/ros2_ws/install/IAS_0220_250620
+[0.630s] Invoking command in '/home/vlados/ros2_ws/build/IAS_0220_250620': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ros2_ws/build/IAS_0220_250620 -- -j16 -l16
+[0.670s] Invoked command in '/home/vlados/ros2_ws/build/IAS_0220_250620' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ros2_ws/build/IAS_0220_250620 -- -j16 -l16
+[0.682s] Invoking command in '/home/vlados/ros2_ws/build/IAS_0220_250620': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ros2_ws/build/IAS_0220_250620
+[0.690s] -- Install configuration: ""
+[0.691s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/ament_index/resource_index/package_run_dependencies/IAS_0220_250620
+[0.691s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/ament_index/resource_index/parent_prefix_path/IAS_0220_250620
+[0.691s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/environment/ament_prefix_path.sh
+[0.691s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/environment/ament_prefix_path.dsv
+[0.692s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/environment/path.sh
+[0.692s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/environment/path.dsv
+[0.692s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/local_setup.bash
+[0.692s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/local_setup.sh
+[0.692s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/local_setup.zsh
+[0.693s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/local_setup.dsv
+[0.693s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/package.dsv
+[0.693s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/ament_index/resource_index/packages/IAS_0220_250620
+[0.693s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/cmake/IAS_0220_250620Config.cmake
+[0.693s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/cmake/IAS_0220_250620Config-version.cmake
+[0.694s] -- Installing: /home/vlados/ros2_ws/install/IAS_0220_250620/share/IAS_0220_250620/package.xml
+[0.696s] Invoked command in '/home/vlados/ros2_ws/build/IAS_0220_250620' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ros2_ws/build/IAS_0220_250620

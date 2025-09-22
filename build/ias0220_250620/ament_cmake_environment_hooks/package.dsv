@@ -1,0 +1,4 @@
+source;share/ias0220_250620/local_setup.bash
+source;share/ias0220_250620/local_setup.dsv
+source;share/ias0220_250620/local_setup.sh
+source;share/ias0220_250620/local_setup.zsh

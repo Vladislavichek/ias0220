@@ -1,0 +1,3 @@
+[0mCMake Error: The source directory "/home/vlados/ros2_ws/src/IAS_0220_250620" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

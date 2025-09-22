@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+
+
+
+<robot name="The_IAS_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name = "BASE_RADIUS" value = "0.175"/>
+    <xacro:property name = "BASE_HEIGHT" value = "0.02"/>
+    <xacro:property name = "WHEEL_RADIUS" value = "0.036"/>
+    <xacro:property name = "HEAD_SIDE_SIZE" value = "0.03"/>
+    <xacro:property name = "SUPPORT_WIDTH" value = "0.015"/>
+
+    <xacro:property name = "WHEEL_HOLDER_HEIGHT" value = "${(WHEEL_RADIUS - BASE_HEIGHT/2) - SUPPORT_WIDTH/2}"/>
+
+    <!-- 
+    Parameters:
+        prefix - name the side of the wheel (right/left)
+    -->
+    <xacro:macro name = "wheel_link" params = "prefix">
+        <link name="${prefix}_wheel_link">
+            <visual>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <cylinder radius="${WHEEL_RADIUS}" length="0.008"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <cylinder radius="${WHEEL_RADIUS}" length="0.02"/>
+                </geometry>
+            </collision>
+        </link>
+        
+    </xacro:macro>
+
+    <!-- 
+    Parameters:
+        prefix    - name the side of the wheel (right/left)
+        direction - defines the position of the wheels relative to the body 
+                    (1 - makes the wheel be on the right and be rotated properly / -1 - left)
+    -->
+    <xacro:macro name = "wheel_joint" params = "prefix direction">
+        <joint name="base_to_${prefix}_wheel" type="fixed">
+            <origin xyz="0.0 ${BASE_RADIUS*direction} 0.0" rpy=" ${direction*(-pi/2)} 0.0 0.0"/>
+            <parent link="base_link"/>
+            <child link="${prefix}_wheel_link"/>
+            <axis xyz="0.0 0.0 ${direction}"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- 
+    Parameters:
+        prefix - name the side of the wheel (right/left)
+    -->
+    <xacro:macro name = "rotation_marker_link" params = "prefix">
+        <link name="${prefix}_rotation_marker_link">
+            <visual>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.002 ${WHEEL_RADIUS} 0.002"/>
+                </geometry>
+                <material name="white"/>
+            </visual>
+        </link>
+    </xacro:macro>
+
+     <!-- 
+    Parameters:
+        prefix - name the side of the wheel (right/left)
+        side   - defines whether the marker is by default on the top 
+                 of the wheel or the bottom (1/-1) 
+    -->
+    <xacro:macro name = "wheel_to_rotation_marker" params = "prefix side">
+        <joint name="${prefix}_rotation_marker_joint" type="fixed">
+            <origin xyz="0.0 ${side * WHEEL_RADIUS/2} 0.0041" rpy="0.0 0.0 0.0"/> 
+            <!-- Moved the marker out of the wheel for 
+                 half a wheel and a marker width away -->
+
+            <parent link="${prefix}_wheel_link"/>
+            <child link="${prefix}_rotation_marker_link"/>
+            <axis xyz="0.0 0.0 0.0"/>
+            <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+        </joint>
+    </xacro:macro>
+
+
+
+
+    <material name="red">
+        <color rgba="0.9 0.1 0.1 1.0"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.1 0.1 0.9 1.0"/>
+    </material>
+
+    <material name = "white">
+        <color rgba="1 1 1 1.0"/>
+    </material>
+
+
+
+
+    <link name="base_footprint"/>
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${BASE_RADIUS}" length="${BASE_HEIGHT}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${BASE_RADIUS}" length="${BASE_HEIGHT}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="head_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE}"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="passive_wheel_holder_link">
+        <visual>
+            <geometry>
+                <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="passive_wheel_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="${SUPPORT_WIDTH/2}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="${SUPPORT_WIDTH/2}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    
+
+    <xacro:wheel_link prefix = "left"/>
+    <xacro:wheel_link prefix = "right"/>
+
+    <xacro:rotation_marker_link prefix = "right"/>
+    <xacro:rotation_marker_link prefix = "left"/>
+
+
+
+
+    <xacro:wheel_joint prefix = "right" direction = "1"/>
+    <xacro:wheel_joint prefix = "left" direction = "-1"/>
+
+    <xacro:wheel_to_rotation_marker prefix = "right" side = "-1"/>
+    <xacro:wheel_to_rotation_marker prefix = "left" side = "1"/>
+
+    <joint name="passive_wheel_holder_to_wheel" type="fixed">
+        <origin xyz="0.0 0.0 ${-WHEEL_HOLDER_HEIGHT/2}" rpy="0.0 0.0 0.0"/>
+        <parent link="passive_wheel_holder_link"/>
+        <child link="passive_wheel_link"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="head_to_support_base" type="fixed">
+        <!-- xyz wrong since the distance is from the center of the head
+             to the center of the support base -->
+        <origin xyz="0.0 0.0 ${-(BASE_HEIGHT + HEAD_SIDE_SIZE/2 + WHEEL_HOLDER_HEIGHT/2)}"/> 
+        <parent link="head_link"/>
+        <child link="passive_wheel_holder_link"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="base_link_to_head" type="fixed">
+        <origin xyz="${BASE_RADIUS - HEAD_SIDE_SIZE/2} 0.0 ${BASE_HEIGHT/2 + HEAD_SIDE_SIZE/2}"/>
+        <parent link="base_link"/>
+        <child link="head_link"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="base_link_to_footprint" type="fixed">
+        <origin xyz="0.0 0.0 0.03" rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+</robot>
