@@ -6,10 +6,33 @@
     <xacro:property name = "BASE_RADIUS" value = "0.175"/>
     <xacro:property name = "BASE_HEIGHT" value = "0.02"/>
     <xacro:property name = "WHEEL_RADIUS" value = "0.036"/>
+    <xacro:property name = "WHEEL_HEIGHT" value = "0.008"/>
     <xacro:property name = "HEAD_SIDE_SIZE" value = "0.03"/>
     <xacro:property name = "SUPPORT_WIDTH" value = "0.015"/>
 
     <xacro:property name = "WHEEL_HOLDER_HEIGHT" value = "${(WHEEL_RADIUS - BASE_HEIGHT/2) - SUPPORT_WIDTH/2}"/>
+
+
+    <xacro:property name = "WHEEL_MASS" value = "0.25"/>
+    <xacro:property name = "BASE_MASS" value = "0.2"/>
+    <xacro:property name = "HEAD_MASS" value = "0.02"/>
+    <xacro:property name = "WHEEL_HOLDER_MASS" value = "0.015"/>
+    <xacro:property name = "PASSIVE_WHEEL_MASS" value = "0.01"/>
+
+
+    <xacro:property name = "WHEEL_XX_YY_INERTIA" value = "${(1/12)*WHEEL_MASS*(3*(WHEEL_RADIUS**2)+(WHEEL_HEIGHT**2))}"/>
+    <xacro:property name = "WHEEL_ZZ_INERTIA" value = "${(1/2)*WHEEL_MASS*WHEEL_RADIUS**2}"/>
+
+    <xacro:property name = "BASE_XX_YY_INERTIA" value = "${(1/12)*BASE_MASS*(3*(BASE_RADIUS**2)+(BASE_HEIGHT**2))}"/>
+    <xacro:property name = "BASE_ZZ_INERTIA" value = "${(1/2)*BASE_MASS*BASE_RADIUS**2}"/>
+
+    <xacro:property name = "HEAD_XX_YY_ZZ_INERTIA" value = "${(1/6)*HEAD_MASS*(HEAD_SIDE_SIZE**2)}"/>
+
+    <xacro:property name = "WHEEL_HOLDER_XX_INERTIA" value = "${(1/12)*WHEEL_HOLDER_MASS*((SUPPORT_WIDTH**2)+(WHEEL_HOLDER_HEIGHT**2))}"/>
+    <xacro:property name = "WHEEL_HOLDER_YY_INERTIA" value = "${(1/12)*WHEEL_HOLDER_MASS*((SUPPORT_WIDTH**2)+(WHEEL_HOLDER_HEIGHT**2))}"/>
+    <xacro:property name = "WHEEL_HOLDER_ZZ_INERTIA" value = "${(1/12)*WHEEL_HOLDER_MASS*((SUPPORT_WIDTH**2)+(SUPPORT_WIDTH**2))}"/>
+
+    <xacro:property name = "PASSIVE_WHEEL_XX_YY_ZZ_INERTIA" value = "${(2/5)*PASSIVE_WHEEL_MASS*(SUPPORT_WIDTH/2)**2}"/>
 
     <!-- 
     Parameters:
@@ -20,16 +43,21 @@
             <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <cylinder radius="${WHEEL_RADIUS}" length="0.008"/>
+                    <cylinder radius="${WHEEL_RADIUS}" length="${WHEEL_HEIGHT}"/>
                 </geometry>
                 <material name="black"/>
             </visual>
             <collision>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <cylinder radius="${WHEEL_RADIUS}" length="0.02"/>
+                    <cylinder radius="${WHEEL_RADIUS}" length="${WHEEL_HEIGHT}"/>
                 </geometry>
             </collision>
+            <inertial>
+                <mass value="${WHEEL_MASS}"/>
+                <inertia ixx="${WHEEL_XX_YY_INERTIA}" ixy="0.0" ixz="0.0" iyy="${WHEEL_XX_YY_INERTIA}" iyz="0.0" izz="${WHEEL_ZZ_INERTIA}"/>
+            </inertial>
+            
         </link>
         
     </xacro:macro>
@@ -41,11 +69,12 @@
                     (1 - makes the wheel be on the right and be rotated properly / -1 - left)
     -->
     <xacro:macro name = "wheel_joint" params = "prefix direction">
-        <joint name="base_to_${prefix}_wheel" type="fixed">
+        <joint name="base_to_${prefix}_wheel" type="revolute">
             <origin xyz="0.0 ${BASE_RADIUS*direction} 0.0" rpy=" ${direction*(-pi/2)} 0.0 0.0"/>
             <parent link="base_link"/>
             <child link="${prefix}_wheel_link"/>
             <axis xyz="0.0 0.0 ${direction}"/>
+            <limit lower="-1000" upper="1000" effort="1.0" velocity="10.0"/>
         </joint>
     </xacro:macro>
 
@@ -122,6 +151,10 @@
                 <cylinder radius="${BASE_RADIUS}" length="${BASE_HEIGHT}"/>
             </geometry>
         </collision>
+        <inertial>
+            <mass value="${BASE_MASS}"/>
+            <inertia ixx="${BASE_XX_YY_INERTIA}" ixy="0.0" ixz="0.0" iyy="${BASE_XX_YY_INERTIA}" iyz="0.0" izz="${BASE_ZZ_INERTIA}"/>
+        </inertial>
     </link>
 
     <link name="head_link">
@@ -138,6 +171,10 @@
                 <box size="${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE}"/>
             </geometry>
         </collision>
+        <inertial>
+            <mass value="${HEAD_MASS}"/>
+            <inertia ixx="${HEAD_XX_YY_ZZ_INERTIA}" ixy="0.0" ixz="0.0" iyy="${HEAD_XX_YY_ZZ_INERTIA}" iyz="0.0" izz="${HEAD_XX_YY_ZZ_INERTIA}"/>
+        </inertial>
     </link>
 
     <link name="passive_wheel_holder_link">
@@ -152,6 +189,10 @@
                 <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
             </geometry>
         </collision>
+        <inertial>
+            <mass value="${WHEEL_HOLDER_MASS}"/>
+            <inertia ixx="${WHEEL_HOLDER_XX_INERTIA}" ixy="0.0" ixz="0.0" iyy="${WHEEL_HOLDER_YY_INERTIA}" iyz="0.0" izz="${WHEEL_HOLDER_ZZ_INERTIA}"/>
+        </inertial>
     </link>
 
     <link name="passive_wheel_link">
@@ -168,6 +209,10 @@
                 <sphere radius="${SUPPORT_WIDTH/2}"/>
             </geometry>
         </collision>
+        <inertial>
+            <mass value="${PASSIVE_WHEEL_MASS}"/>
+            <inertia ixx="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}" ixy="0.0" ixz="0.0" iyy="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}" iyz="0.0" izz="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}"/>
+        </inertial>
     </link>
 
     
