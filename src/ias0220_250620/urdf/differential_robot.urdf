@@ -13,7 +13,7 @@
     <xacro:property name = "WHEEL_HOLDER_HEIGHT" value = "${(WHEEL_RADIUS - BASE_HEIGHT/2) - SUPPORT_WIDTH/2}"/>
 
 
-    <xacro:property name = "WHEEL_MASS" value = "0.25"/>
+    <xacro:property name = "WHEEL_MASS" value = "0.025"/>
     <xacro:property name = "BASE_MASS" value = "0.2"/>
     <xacro:property name = "HEAD_MASS" value = "0.02"/>
     <xacro:property name = "WHEEL_HOLDER_MASS" value = "0.015"/>
