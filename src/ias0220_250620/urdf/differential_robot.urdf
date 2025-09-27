@@ -108,7 +108,7 @@
             <!-- Moved the marker out of the wheel for 
                  half a wheel and a marker width away -->
 
-            <parent link="${prefix}_wheel_link"/>
+            <parent link="${prefix}_wheel"/>
             <child link="${prefix}_rotation_marker_link"/>
             <axis xyz="0.0 0.0 0.0"/>
             <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>

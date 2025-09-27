@@ -3,7 +3,120 @@
 
 
 <robot name="The_IAS_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:include filename="$(find ias0220_250620)/urdf/dif_rob_macros.xacro"/>
+    <!-- <xacro:include filename="$(find ias0220_250620)/urdf/dif_rob_macros.xacro"/> -->
+
+    <xacro:property name = "BASE_RADIUS" value = "0.175"/>
+    <xacro:property name = "BASE_HEIGHT" value = "0.02"/>
+    <xacro:property name = "WHEEL_RADIUS" value = "0.036"/>
+    <xacro:property name = "WHEEL_HEIGHT" value = "0.008"/>
+    <xacro:property name = "HEAD_SIDE_SIZE" value = "0.03"/>
+    <xacro:property name = "SUPPORT_WIDTH" value = "0.015"/>
+
+    <xacro:property name = "WHEEL_HOLDER_HEIGHT" value = "${(WHEEL_RADIUS - BASE_HEIGHT/2) - SUPPORT_WIDTH/2}"/>
+
+
+    <xacro:property name = "WHEEL_MASS" value = "0.025"/>
+    <xacro:property name = "BASE_MASS" value = "0.2"/>
+    <xacro:property name = "HEAD_MASS" value = "0.02"/>
+    <xacro:property name = "WHEEL_HOLDER_MASS" value = "0.015"/>
+    <xacro:property name = "PASSIVE_WHEEL_MASS" value = "0.01"/>
+
+
+    <xacro:property name = "WHEEL_XX_YY_INERTIA" value = "${(1/12)*WHEEL_MASS*(3*(WHEEL_RADIUS**2)+(WHEEL_HEIGHT**2))}"/>
+    <xacro:property name = "WHEEL_ZZ_INERTIA" value = "${(1/2)*WHEEL_MASS*WHEEL_RADIUS**2}"/>
+
+    <xacro:property name = "BASE_XX_YY_INERTIA" value = "${(1/12)*BASE_MASS*(3*(BASE_RADIUS**2)+(BASE_HEIGHT**2))}"/>
+    <xacro:property name = "BASE_ZZ_INERTIA" value = "${(1/2)*BASE_MASS*BASE_RADIUS**2}"/>
+
+    <xacro:property name = "HEAD_XX_YY_ZZ_INERTIA" value = "${(1/6)*HEAD_MASS*(HEAD_SIDE_SIZE**2)}"/>
+
+    <xacro:property name = "WHEEL_HOLDER_XX_INERTIA" value = "${(1/12)*WHEEL_HOLDER_MASS*((SUPPORT_WIDTH**2)+(WHEEL_HOLDER_HEIGHT**2))}"/>
+    <xacro:property name = "WHEEL_HOLDER_YY_INERTIA" value = "${(1/12)*WHEEL_HOLDER_MASS*((SUPPORT_WIDTH**2)+(WHEEL_HOLDER_HEIGHT**2))}"/>
+    <xacro:property name = "WHEEL_HOLDER_ZZ_INERTIA" value = "${(1/12)*WHEEL_HOLDER_MASS*((SUPPORT_WIDTH**2)+(SUPPORT_WIDTH**2))}"/>
+
+    <xacro:property name = "PASSIVE_WHEEL_XX_YY_ZZ_INERTIA" value = "${(2/5)*PASSIVE_WHEEL_MASS*(SUPPORT_WIDTH/2)**2}"/>
+
+    <!-- 
+    Parameters:
+        prefix - name the side of the wheel (right/left)
+    -->
+    <xacro:macro name = "wheel_link" params = "prefix">
+        <link name="${prefix}_wheel">
+            <visual>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <cylinder radius="${WHEEL_RADIUS}" length="${WHEEL_HEIGHT}"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <cylinder radius="${WHEEL_RADIUS}" length="${WHEEL_HEIGHT}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="${WHEEL_MASS}"/>
+                <inertia ixx="${WHEEL_XX_YY_INERTIA}" ixy="0.0" ixz="0.0" iyy="${WHEEL_XX_YY_INERTIA}" iyz="0.0" izz="${WHEEL_ZZ_INERTIA}"/>
+            </inertial>
+            
+        </link>
+        
+    </xacro:macro>
+
+    <!-- 
+    Parameters:
+        prefix    - name the side of the wheel (right/left)
+        direction - defines the position of the wheels relative to the body 
+                    (1 - makes the wheel be on the right and be rotated properly / -1 - left)
+    -->
+    <xacro:macro name = "wheel_joint" params = "prefix direction">
+        <joint name="base_to_${prefix}_wheel" type="revolute">
+            <origin xyz="0.0 ${BASE_RADIUS*direction} 0.0" rpy=" ${direction*(-pi/2)} 0.0 0.0"/>
+            <parent link="base_link"/>
+            <child link="${prefix}_wheel"/>
+            <axis xyz="0.0 0.0 ${direction}"/>
+            <limit lower="-1000" upper="1000" effort="1.0" velocity="10.0"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- 
+    Parameters:
+        prefix - name the side of the wheel (right/left)
+    -->
+    <xacro:macro name = "rotation_marker_link" params = "prefix">
+        <link name="${prefix}_rotation_marker_link">
+            <visual>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.002 ${WHEEL_RADIUS} 0.002"/>
+                </geometry>
+                <material name="white"/>
+            </visual>
+        </link>
+    </xacro:macro>
+
+     <!-- 
+    Parameters:
+        prefix - name the side of the wheel (right/left)
+        side   - defines whether the marker is by default on the top 
+                 of the wheel or the bottom (1/-1) 
+    -->
+    <xacro:macro name = "wheel_to_rotation_marker" params = "prefix side">
+        <joint name="${prefix}_rotation_marker_joint" type="fixed">
+            <origin xyz="0.0 ${side * WHEEL_RADIUS/2} 0.0041" rpy="0.0 0.0 0.0"/> 
+            <!-- Moved the marker out of the wheel for 
+                 half a wheel and a marker width away -->
+
+            <parent link="${prefix}_wheel"/>
+            <child link="${prefix}_rotation_marker_link"/>
+            <axis xyz="0.0 0.0 0.0"/>
+            <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+        </joint>
+    </xacro:macro>
+
+
+
 
 
     <material name="red">
@@ -67,7 +180,7 @@
         </inertial>
     </link>
 
-    <link name="passive_wheel_holder_link">
+    <link name="passive_wheel_holder">
         <visual>
             <geometry>
                 <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
@@ -85,7 +198,7 @@
         </inertial>
     </link>
 
-    <link name="passive_wheel_link">
+    <link name="passive_wheel">
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
@@ -124,8 +237,8 @@
 
     <joint name="passive_wheel_holder_to_wheel" type="fixed">
         <origin xyz="0.0 0.0 ${-WHEEL_HOLDER_HEIGHT/2}" rpy="0.0 0.0 0.0"/>
-        <parent link="passive_wheel_holder_link"/>
-        <child link="passive_wheel_link"/>
+        <parent link="passive_wheel_holder"/>
+        <child link="passive_wheel"/>
         <axis xyz="0.0 0.0 0.0"/>
     </joint>
 
@@ -134,7 +247,7 @@
              to the center of the support base -->
         <origin xyz="0.0 0.0 ${-(BASE_HEIGHT + HEAD_SIDE_SIZE/2 + WHEEL_HOLDER_HEIGHT/2)}"/> 
         <parent link="head_link"/>
-        <child link="passive_wheel_holder_link"/>
+        <child link="passive_wheel_holder"/>
         <axis xyz="0.0 0.0 0.0"/>
     </joint>
 
