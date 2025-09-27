@@ -3,6 +3,8 @@
 
 
 <robot name="The_IAS_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- <xacro:include filename="$(find ias0220_250620)/urdf/dif_rob_macros.xacro"/> -->
+
     <xacro:property name = "BASE_RADIUS" value = "0.175"/>
     <xacro:property name = "BASE_HEIGHT" value = "0.02"/>
     <xacro:property name = "WHEEL_RADIUS" value = "0.036"/>
@@ -39,7 +41,7 @@
         prefix - name the side of the wheel (right/left)
     -->
     <xacro:macro name = "wheel_link" params = "prefix">
-        <link name="${prefix}_wheel_link">
+        <link name="${prefix}_wheel">
             <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
@@ -72,7 +74,7 @@
         <joint name="base_to_${prefix}_wheel" type="revolute">
             <origin xyz="0.0 ${BASE_RADIUS*direction} 0.0" rpy=" ${direction*(-pi/2)} 0.0 0.0"/>
             <parent link="base_link"/>
-            <child link="${prefix}_wheel_link"/>
+            <child link="${prefix}_wheel"/>
             <axis xyz="0.0 0.0 ${direction}"/>
             <limit lower="-1000" upper="1000" effort="1.0" velocity="10.0"/>
         </joint>
@@ -112,6 +114,7 @@
             <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
         </joint>
     </xacro:macro>
+
 
 
 
@@ -177,7 +180,7 @@
         </inertial>
     </link>
 
-    <link name="passive_wheel_holder_link">
+    <link name="passive_wheel_holder">
         <visual>
             <geometry>
                 <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
@@ -195,7 +198,7 @@
         </inertial>
     </link>
 
-    <link name="passive_wheel_link">
+    <link name="passive_wheel">
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
@@ -234,8 +237,8 @@
 
     <joint name="passive_wheel_holder_to_wheel" type="fixed">
         <origin xyz="0.0 0.0 ${-WHEEL_HOLDER_HEIGHT/2}" rpy="0.0 0.0 0.0"/>
-        <parent link="passive_wheel_holder_link"/>
-        <child link="passive_wheel_link"/>
+        <parent link="passive_wheel_holder"/>
+        <child link="passive_wheel"/>
         <axis xyz="0.0 0.0 0.0"/>
     </joint>
 
@@ -244,7 +247,7 @@
              to the center of the support base -->
         <origin xyz="0.0 0.0 ${-(BASE_HEIGHT + HEAD_SIDE_SIZE/2 + WHEEL_HOLDER_HEIGHT/2)}"/> 
         <parent link="head_link"/>
-        <child link="passive_wheel_holder_link"/>
+        <child link="passive_wheel_holder"/>
         <axis xyz="0.0 0.0 0.0"/>
     </joint>
 
