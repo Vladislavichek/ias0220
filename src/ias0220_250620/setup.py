@@ -19,9 +19,11 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='vlados',
+    maintainer='Vladislav Mulgatsov',
     maintainer_email='vlmulg@taltech.ee',
-    description='TODO: Package description',
+    description='A package with a moving robot that is used as a part of '
+                'independent work in TalTech university for a subject '
+                'IAS0220 "Robot guidance and software"',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
