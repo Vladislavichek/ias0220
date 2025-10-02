@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
+        - /RobotModel1/Mass Properties1
         - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.4881889820098877
@@ -82,7 +83,27 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        left_rotation_marker_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        passive_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        passive_wheel_holder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_rotation_marker_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -94,7 +115,7 @@ Visualization Manager:
           Value: true
       Mass Properties:
         Inertia: false
-        Mass: false
+        Mass: true
       Name: RobotModel
       TF Prefix: ""
       Update Interval: 0
@@ -111,7 +132,15 @@ Visualization Manager:
           Value: true
         head_link:
           Value: true
+        left_rotation_marker_link:
+          Value: true
         left_wheel:
+          Value: true
+        passive_wheel:
+          Value: true
+        passive_wheel_holder:
+          Value: true
+        right_rotation_marker_link:
           Value: true
         right_wheel:
           Value: true
@@ -124,11 +153,15 @@ Visualization Manager:
         base_footprint:
           base_link:
             head_link:
-              {}
+              passive_wheel_holder:
+                passive_wheel:
+                  {}
             left_wheel:
-              {}
+              left_rotation_marker_link:
+                {}
             right_wheel:
-              {}
+              right_rotation_marker_link:
+                {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -192,10 +225,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.10995697230100632
+      Pitch: 0.36495688557624817
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 4.920825004577637
+      Yaw: 5.625828266143799
     Saved: ~
 Window Geometry:
   Displays:
@@ -214,4 +247,4 @@ Window Geometry:
     collapsed: false
   Width: 1502
   X: 60
-  Y: 555
+  Y: 654

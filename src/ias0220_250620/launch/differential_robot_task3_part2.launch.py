@@ -48,10 +48,30 @@ def generate_launch_description():
         name="joint_state_publisher_gui",
     )
 
+    move_node = Node(
+        package="transform_frame",
+        executable="move",
+        name="move",
+        output="screen",
+    )
+
+    teleop_twist_node = Node(
+        package="teleop_twist_keyboard",
+        executable="teleop_twist_keyboard",
+        name="teleop_twist_keyboard",
+        remappings=[
+            ("/cmd_vel", "move/cmd_vel")
+        ],
+        output="screen",
+        prefix="konsole -e"
+    )
+
     return LaunchDescription(
         [
             robot_state_publisher_node,
             joint_state_publisher_gui_node,
             rviz_node,
+            move_node,
+            teleop_twist_node,
         ]
     )
