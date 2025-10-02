@@ -13,6 +13,9 @@ config/Task_2-1_config.rviz
 config/default.rviz
 config/test_config.rviz
 ias0220_250620/__init__.py
+ias0220_250620/odometer.py
+ias0220_250620/random_walker.py
+ias0220_250620/test_node.py
 launch/task2.launch.py
 resource/ias0220_250620
 test/test_copyright.py

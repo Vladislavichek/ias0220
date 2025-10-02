@@ -1,0 +1,10 @@
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/uninstall.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/transform_frame_uninstall.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/move.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/test.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/edit_cache.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/rebuild_cache.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/list_install_components.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/install.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/install/local.dir
+/home/vlados/ias0220/build/transform_frame/CMakeFiles/install/strip.dir

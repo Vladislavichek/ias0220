@@ -1,0 +1,191 @@
+[0.000000] (-) TimerEvent: {}
+[0.000222] (ias0220_250620) JobQueued: {'identifier': 'ias0220_250620', 'dependencies': OrderedDict()}
+[0.000327] (transform_frame) JobQueued: {'identifier': 'transform_frame', 'dependencies': OrderedDict()}
+[0.000349] (ias0220_250620) JobStarted: {'identifier': 'ias0220_250620'}
+[0.005747] (transform_frame) JobStarted: {'identifier': 'transform_frame'}
+[0.099778] (-) TimerEvent: {}
+[0.196683] (transform_frame) JobProgress: {'identifier': 'transform_frame', 'progress': 'cmake'}
+[0.197126] (transform_frame) Command: {'cmd': ['/usr/bin/cmake', '/home/vlados/ias0220/src/transform_frame', '-DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/transform_frame'], 'cwd': '/home/vlados/ias0220/build/transform_frame', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('LANGUAGE', ''), ('USER', 'vlados'), ('LC_TIME', 'et_EE.UTF-8'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;DP-1=1;HDMI-1=1;DP-2=1;DP-3=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1344'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '48'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vlados'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vlados/ias0220/src/ias0220_250620/launch'), ('D_DISABLE_RT_SCREEN_SCALE', '1'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'a13e27b7e2854b9d922baaad77dfda85'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vlados/.gtkrc:/home/vlados/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('LC_MONETARY', 'et_EE.UTF-8'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vlados/ias0220/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vlados'), ('WINDOWID', '62914567'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vlados/.gtkrc-2.0:/home/vlados/.config/gtkrc-2.0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Send-love-letters-here:@/tmp/.ICE-unix/1520,unix/Send-love-letters-here:/tmp/.ICE-unix/1520'), ('QT_SCALE_FACTOR_ROUNDING_POLICY', 'PassThrough'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'et_EE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'Oxygen_Blue'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'et_EE.UTF-8'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vlados/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXABX84O/agent.1220'), ('ROS_DOMAIN_ID', '128'), ('AMENT_PREFIX_PATH', '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'et_EE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.55'), ('LC_MEASUREMENT', 'et_EE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'et_EE.UTF-8'), ('XDG_VTNR', '1'), ('PWD', '/home/vlados/ias0220/build/transform_frame'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vlados/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'et_EE.UTF-8'), ('LC_PAPER', 'et_EE.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble')]), 'shell': False}
+[0.199980] (-) TimerEvent: {}
+[0.300382] (-) TimerEvent: {}
+[0.340797] (transform_frame) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.400484] (-) TimerEvent: {}
+[0.416234] (ias0220_250620) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ias0220_250620', 'build', '--build-base', '/home/vlados/ias0220/build/ias0220_250620/build', 'install', '--record', '/home/vlados/ias0220/build/ias0220_250620/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vlados/ias0220/src/ias0220_250620', 'env': {'PROFILEHOME': '', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'LANGUAGE': '', 'USER': 'vlados', 'LC_TIME': 'et_EE.UTF-8', 'QT_SCREEN_SCALE_FACTORS': 'HDMI-0=1;DP-0=1;DP-1=1;HDMI-1=1;DP-2=1;DP-3=1;', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '1344', 'XDG_SESSION_TYPE': 'x11', 'XCURSOR_SIZE': '48', 'KONSOLE_VERSION': '211203', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/vlados', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'OLDPWD': '/home/vlados/ias0220/src/ias0220_250620/launch', 'D_DISABLE_RT_SCREEN_SCALE': '1', 'DESKTOP_SESSION': 'plasma', 'ROS_PYTHON_VERSION': '3', 'SHELL_SESSION_ID': 'a13e27b7e2854b9d922baaad77dfda85', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/vlados/.gtkrc:/home/vlados/.config/gtkrc', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'KDE_SESSION_VERSION': '5', 'LC_MONETARY': 'et_EE.UTF-8', 'KONSOLE_DBUS_SESSION': '/Sessions/1', 'SYSTEMD_EXEC_PID': '1210', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'KONSOLE_DBUS_WINDOW': '/Windows/1', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/vlados/ias0220/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'vlados', 'WINDOWID': '62914567', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'COLORFGBG': '15;0', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/vlados/.gtkrc-2.0:/home/vlados/.config/gtkrc-2.0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Send-love-letters-here:@/tmp/.ICE-unix/1520,unix/Send-love-letters-here:/tmp/.ICE-unix/1520', 'QT_SCALE_FACTOR_ROUNDING_POLICY': 'PassThrough', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'LC_ADDRESS': 'et_EE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'Oxygen_Blue', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/home/vlados/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXXXABX84O/agent.1220', 'ROS_DOMAIN_ID': '128', 'AMENT_PREFIX_PATH': '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'KONSOLE_DBUS_SERVICE': ':1.55', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'XDG_VTNR': '1', 'PWD': '/home/vlados/ias0220/build/ias0220_250620', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/home/vlados/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'XDG_DATA_DIRS': '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vlados/ias0220/build/ias0220_250620/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'KDE_SESSION_UID': '1000', 'COLCON': '1'}, 'shell': False}
+[0.455029] (transform_frame) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.468235] (transform_frame) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.500562] (-) TimerEvent: {}
+[0.534048] (transform_frame) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.539824] (transform_frame) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.540357] (transform_frame) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.541038] (transform_frame) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.543965] (transform_frame) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.598466] (ias0220_250620) StdoutLine: {'line': b'running egg_info\n'}
+[0.598791] (ias0220_250620) StdoutLine: {'line': b'writing ../../build/ias0220_250620/ias0220_250620.egg-info/PKG-INFO\n'}
+[0.598951] (ias0220_250620) StdoutLine: {'line': b'writing dependency_links to ../../build/ias0220_250620/ias0220_250620.egg-info/dependency_links.txt\n'}
+[0.599064] (ias0220_250620) StdoutLine: {'line': b'writing entry points to ../../build/ias0220_250620/ias0220_250620.egg-info/entry_points.txt\n'}
+[0.599203] (ias0220_250620) StdoutLine: {'line': b'writing requirements to ../../build/ias0220_250620/ias0220_250620.egg-info/requires.txt\n'}
+[0.599328] (ias0220_250620) StdoutLine: {'line': b'writing top-level names to ../../build/ias0220_250620/ias0220_250620.egg-info/top_level.txt\n'}
+[0.600397] (ias0220_250620) StdoutLine: {'line': b"reading manifest file '../../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'\n"}
+[0.600598] (ias0220_250620) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[0.600679] (-) TimerEvent: {}
+[0.601056] (ias0220_250620) StdoutLine: {'line': b"writing manifest file '../../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'\n"}
+[0.601200] (ias0220_250620) StdoutLine: {'line': b'running build\n'}
+[0.601284] (ias0220_250620) StdoutLine: {'line': b'running build_py\n'}
+[0.601407] (ias0220_250620) StdoutLine: {'line': b'running install\n'}
+[0.601515] (ias0220_250620) StdoutLine: {'line': b'running install_lib\n'}
+[0.602180] (ias0220_250620) StdoutLine: {'line': b'running install_data\n'}
+[0.602310] (ias0220_250620) StdoutLine: {'line': b'copying launch/task2.launch.py -> /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch\n'}
+[0.602506] (ias0220_250620) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.603598] (ias0220_250620) StdoutLine: {'line': b"removing '/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.603871] (ias0220_250620) StdoutLine: {'line': b'Copying ../../build/ias0220_250620/ias0220_250620.egg-info to /home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620-0.0.0-py3.10.egg-info\n'}
+[0.604515] (ias0220_250620) StdoutLine: {'line': b'running install_scripts\n'}
+[0.611519] (transform_frame) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.617690] (transform_frame) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.617906] (transform_frame) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.618273] (transform_frame) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.618572] (ias0220_250620) StdoutLine: {'line': b'Installing entry_point_name script to /home/vlados/ias0220/install/ias0220_250620/lib/ias0220_250620\n'}
+[0.618834] (ias0220_250620) StdoutLine: {'line': b"writing list of installed files to '/home/vlados/ias0220/build/ias0220_250620/install.log'\n"}
+[0.623044] (transform_frame) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.633666] (ias0220_250620) CommandEnded: {'returncode': 0}
+[0.640904] (ias0220_250620) JobEnded: {'identifier': 'ias0220_250620', 'rc': 0}
+[0.700768] (-) TimerEvent: {}
+[0.770195] (transform_frame) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.800861] (-) TimerEvent: {}
+[0.866822] (transform_frame) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.900941] (-) TimerEvent: {}
+[0.918067] (transform_frame) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.923939] (transform_frame) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.933460] (transform_frame) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.948394] (transform_frame) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.965956] (transform_frame) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.001017] (-) TimerEvent: {}
+[1.014909] (transform_frame) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.018021] (transform_frame) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.101137] (-) TimerEvent: {}
+[1.117855] (transform_frame) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.160065] (transform_frame) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.201206] (-) TimerEvent: {}
+[1.205350] (transform_frame) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.214804] (transform_frame) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.292758] (transform_frame) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.293303] (transform_frame) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.301281] (-) TimerEvent: {}
+[1.367844] (transform_frame) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.368746] (transform_frame) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.401352] (-) TimerEvent: {}
+[1.427741] (transform_frame) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.442729] (transform_frame) StdoutLine: {'line': b'-- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.454490] (transform_frame) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.501425] (-) TimerEvent: {}
+[1.551955] (transform_frame) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.566302] (transform_frame) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.567793] (transform_frame) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.567939] (transform_frame) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.571272] (transform_frame) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.601519] (-) TimerEvent: {}
+[1.641083] (transform_frame) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.641901] (transform_frame) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.642131] (transform_frame) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.642240] (transform_frame) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.642666] (transform_frame) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.642765] (transform_frame) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.643367] (transform_frame) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.644204] (transform_frame) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.644312] (transform_frame) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.644669] (transform_frame) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.645998] (transform_frame) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.656314] (transform_frame) StdoutLine: {'line': b'-- Generating done\n'}
+[1.659480] (transform_frame) StdoutLine: {'line': b'-- Build files have been written to: /home/vlados/ias0220/build/transform_frame\n'}
+[1.667450] (transform_frame) CommandEnded: {'returncode': 0}
+[1.668204] (transform_frame) JobProgress: {'identifier': 'transform_frame', 'progress': 'build'}
+[1.669087] (transform_frame) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vlados/ias0220/build/transform_frame', '--', '-j16', '-l16'], 'cwd': '/home/vlados/ias0220/build/transform_frame', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('LANGUAGE', ''), ('USER', 'vlados'), ('LC_TIME', 'et_EE.UTF-8'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;DP-1=1;HDMI-1=1;DP-2=1;DP-3=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1344'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '48'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vlados'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vlados/ias0220/src/ias0220_250620/launch'), ('D_DISABLE_RT_SCREEN_SCALE', '1'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'a13e27b7e2854b9d922baaad77dfda85'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vlados/.gtkrc:/home/vlados/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('LC_MONETARY', 'et_EE.UTF-8'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vlados/ias0220/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vlados'), ('WINDOWID', '62914567'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vlados/.gtkrc-2.0:/home/vlados/.config/gtkrc-2.0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Send-love-letters-here:@/tmp/.ICE-unix/1520,unix/Send-love-letters-here:/tmp/.ICE-unix/1520'), ('QT_SCALE_FACTOR_ROUNDING_POLICY', 'PassThrough'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'et_EE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'Oxygen_Blue'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'et_EE.UTF-8'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vlados/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXABX84O/agent.1220'), ('ROS_DOMAIN_ID', '128'), ('AMENT_PREFIX_PATH', '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'et_EE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.55'), ('LC_MEASUREMENT', 'et_EE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'et_EE.UTF-8'), ('XDG_VTNR', '1'), ('PWD', '/home/vlados/ias0220/build/transform_frame'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vlados/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'et_EE.UTF-8'), ('LC_PAPER', 'et_EE.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble')]), 'shell': False}
+[1.701604] (-) TimerEvent: {}
+[1.722873] (transform_frame) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/move.dir/src/move.cpp.o\x1b[0m\n'}
+[1.801698] (-) TimerEvent: {}
+[1.901967] (-) TimerEvent: {}
+[2.002271] (-) TimerEvent: {}
+[2.105065] (-) TimerEvent: {}
+[2.205388] (-) TimerEvent: {}
+[2.305694] (-) TimerEvent: {}
+[2.406001] (-) TimerEvent: {}
+[2.506337] (-) TimerEvent: {}
+[2.606647] (-) TimerEvent: {}
+[2.706955] (-) TimerEvent: {}
+[2.807283] (-) TimerEvent: {}
+[2.907594] (-) TimerEvent: {}
+[3.007900] (-) TimerEvent: {}
+[3.108191] (-) TimerEvent: {}
+[3.208503] (-) TimerEvent: {}
+[3.308809] (-) TimerEvent: {}
+[3.409142] (-) TimerEvent: {}
+[3.509458] (-) TimerEvent: {}
+[3.609769] (-) TimerEvent: {}
+[3.710087] (-) TimerEvent: {}
+[3.810412] (-) TimerEvent: {}
+[3.910722] (-) TimerEvent: {}
+[4.011026] (-) TimerEvent: {}
+[4.111337] (-) TimerEvent: {}
+[4.211639] (-) TimerEvent: {}
+[4.311951] (-) TimerEvent: {}
+[4.412294] (-) TimerEvent: {}
+[4.512605] (-) TimerEvent: {}
+[4.612916] (-) TimerEvent: {}
+[4.713255] (-) TimerEvent: {}
+[4.813557] (-) TimerEvent: {}
+[4.914199] (-) TimerEvent: {}
+[5.014538] (-) TimerEvent: {}
+[5.115192] (-) TimerEvent: {}
+[5.215926] (-) TimerEvent: {}
+[5.316598] (-) TimerEvent: {}
+[5.417391] (-) TimerEvent: {}
+[5.517742] (-) TimerEvent: {}
+[5.618483] (-) TimerEvent: {}
+[5.719170] (-) TimerEvent: {}
+[5.819503] (-) TimerEvent: {}
+[5.920155] (-) TimerEvent: {}
+[6.020791] (-) TimerEvent: {}
+[6.121495] (-) TimerEvent: {}
+[6.222168] (-) TimerEvent: {}
+[6.322887] (-) TimerEvent: {}
+[6.423521] (-) TimerEvent: {}
+[6.524170] (-) TimerEvent: {}
+[6.624506] (-) TimerEvent: {}
+[6.725174] (-) TimerEvent: {}
+[6.825884] (-) TimerEvent: {}
+[6.926528] (-) TimerEvent: {}
+[7.027180] (-) TimerEvent: {}
+[7.127516] (-) TimerEvent: {}
+[7.227841] (-) TimerEvent: {}
+[7.328195] (-) TimerEvent: {}
+[7.428546] (-) TimerEvent: {}
+[7.528897] (-) TimerEvent: {}
+[7.598522] (transform_frame) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable move\x1b[0m\n'}
+[7.628996] (-) TimerEvent: {}
+[7.729257] (-) TimerEvent: {}
+[7.829466] (-) TimerEvent: {}
+[7.929673] (-) TimerEvent: {}
+[7.940898] (transform_frame) StdoutLine: {'line': b'[100%] Built target move\n'}
+[7.956151] (transform_frame) CommandEnded: {'returncode': 0}
+[7.956771] (transform_frame) JobProgress: {'identifier': 'transform_frame', 'progress': 'install'}
+[7.969694] (transform_frame) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vlados/ias0220/build/transform_frame'], 'cwd': '/home/vlados/ias0220/build/transform_frame', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('LANGUAGE', ''), ('USER', 'vlados'), ('LC_TIME', 'et_EE.UTF-8'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;DP-1=1;HDMI-1=1;DP-2=1;DP-3=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1344'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '48'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vlados'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vlados/ias0220/src/ias0220_250620/launch'), ('D_DISABLE_RT_SCREEN_SCALE', '1'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'a13e27b7e2854b9d922baaad77dfda85'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vlados/.gtkrc:/home/vlados/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('LC_MONETARY', 'et_EE.UTF-8'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vlados/ias0220/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vlados'), ('WINDOWID', '62914567'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vlados/.gtkrc-2.0:/home/vlados/.config/gtkrc-2.0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Send-love-letters-here:@/tmp/.ICE-unix/1520,unix/Send-love-letters-here:/tmp/.ICE-unix/1520'), ('QT_SCALE_FACTOR_ROUNDING_POLICY', 'PassThrough'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'et_EE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'Oxygen_Blue'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'et_EE.UTF-8'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vlados/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXABX84O/agent.1220'), ('ROS_DOMAIN_ID', '128'), ('AMENT_PREFIX_PATH', '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'et_EE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.55'), ('LC_MEASUREMENT', 'et_EE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'et_EE.UTF-8'), ('XDG_VTNR', '1'), ('PWD', '/home/vlados/ias0220/build/transform_frame'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vlados/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'et_EE.UTF-8'), ('LC_PAPER', 'et_EE.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble')]), 'shell': False}
+[7.978167] (transform_frame) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.978437] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/lib/transform_frame/move\n'}
+[7.983403] (transform_frame) StdoutLine: {'line': b'-- Set runtime path of "/home/vlados/ias0220/install/transform_frame/lib/transform_frame/move" to ""\n'}
+[7.983629] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/ament_index/resource_index/package_run_dependencies/transform_frame\n'}
+[7.983901] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/ament_index/resource_index/parent_prefix_path/transform_frame\n'}
+[7.984207] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/ament_prefix_path.sh\n'}
+[7.984381] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/ament_prefix_path.dsv\n'}
+[7.984596] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/path.sh\n'}
+[7.984785] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/path.dsv\n'}
+[7.984971] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.bash\n'}
+[7.985160] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.sh\n'}
+[7.985301] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.zsh\n'}
+[7.985430] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.dsv\n'}
+[7.985559] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/package.dsv\n'}
+[7.985684] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/ament_index/resource_index/packages/transform_frame\n'}
+[7.985804] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/cmake/transform_frameConfig.cmake\n'}
+[7.985925] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/cmake/transform_frameConfig-version.cmake\n'}
+[7.986032] (transform_frame) StdoutLine: {'line': b'-- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/package.xml\n'}
+[7.987690] (transform_frame) CommandEnded: {'returncode': 0}
+[8.004752] (transform_frame) JobEnded: {'identifier': 'transform_frame', 'rc': 0}
+[8.005545] (-) EventReactorShutdown: {}

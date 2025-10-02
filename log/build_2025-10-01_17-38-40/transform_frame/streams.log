@@ -1,0 +1,78 @@
+[0.194s] Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/transform_frame -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/transform_frame
+[0.335s] -- The C compiler identification is GNU 11.4.0
+[0.449s] -- The CXX compiler identification is GNU 11.4.0
+[0.463s] -- Detecting C compiler ABI info
+[0.528s] -- Detecting C compiler ABI info - done
+[0.534s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.535s] -- Detecting C compile features
+[0.535s] -- Detecting C compile features - done
+[0.538s] -- Detecting CXX compiler ABI info
+[0.606s] -- Detecting CXX compiler ABI info - done
+[0.612s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.612s] -- Detecting CXX compile features
+[0.613s] -- Detecting CXX compile features - done
+[0.617s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.765s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.861s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.912s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.918s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.928s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.943s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.960s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.009s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.012s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.112s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.154s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.200s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.209s] -- Looking for pthread.h
+[1.287s] -- Looking for pthread.h - found
+[1.288s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.362s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.363s] -- Found Threads: TRUE  
+[1.422s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.437s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[1.449s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.546s] -- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.561s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.562s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.562s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.566s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.635s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.636s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.636s] -- Configured cppcheck include dirs: 
+[1.637s] -- Configured cppcheck exclude dirs and/or files: 
+[1.637s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.637s] -- Configured cpplint exclude dirs and/or files: 
+[1.638s] -- Added test 'lint_cmake' to check CMake code style
+[1.639s] -- Added test 'uncrustify' to check C / C++ code style
+[1.639s] -- Configured uncrustify additional arguments: 
+[1.639s] -- Added test 'xmllint' to check XML markup files
+[1.640s] -- Configuring done
+[1.651s] -- Generating done
+[1.654s] -- Build files have been written to: /home/vlados/ias0220/build/transform_frame
+[1.662s] Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/transform_frame -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/transform_frame
+[1.664s] Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/transform_frame -- -j16 -l16
+[1.717s] [ 50%] [32mBuilding CXX object CMakeFiles/move.dir/src/move.cpp.o[0m
+[7.593s] [100%] [32m[1mLinking CXX executable move[0m
+[7.935s] [100%] Built target move
+[7.951s] Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/transform_frame -- -j16 -l16
+[7.964s] Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/transform_frame
+[7.972s] -- Install configuration: ""
+[7.973s] -- Installing: /home/vlados/ias0220/install/transform_frame/lib/transform_frame/move
+[7.978s] -- Set runtime path of "/home/vlados/ias0220/install/transform_frame/lib/transform_frame/move" to ""
+[7.978s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/ament_index/resource_index/package_run_dependencies/transform_frame
+[7.978s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/ament_index/resource_index/parent_prefix_path/transform_frame
+[7.979s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/ament_prefix_path.sh
+[7.979s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/ament_prefix_path.dsv
+[7.979s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/path.sh
+[7.979s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/environment/path.dsv
+[7.979s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.bash
+[7.979s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.sh
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.zsh
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/local_setup.dsv
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/package.dsv
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/ament_index/resource_index/packages/transform_frame
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/cmake/transform_frameConfig.cmake
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/cmake/transform_frameConfig-version.cmake
+[7.980s] -- Installing: /home/vlados/ias0220/install/transform_frame/share/transform_frame/package.xml
+[7.983s] Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/ias0220_250620:/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/transform_frame

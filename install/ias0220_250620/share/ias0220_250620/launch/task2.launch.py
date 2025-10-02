@@ -4,6 +4,7 @@ from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
 import os
 
+
 def generate_launch_description():
     # Declare model argument
     model_arg = DeclareLaunchArgument(

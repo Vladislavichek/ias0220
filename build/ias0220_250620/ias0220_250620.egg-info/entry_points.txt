@@ -1,3 +1,4 @@
 [console_scripts]
-
+odometer = ias0220_250620.odometer:main
+random_walker = ias0220_250620.random_walker:main
 
