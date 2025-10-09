@@ -10,12 +10,11 @@ setup.py
 ../../build/ias0220_250620/ias0220_250620.egg-info/top_level.txt
 ../../build/ias0220_250620/ias0220_250620.egg-info/zip-safe
 config/Task_2-1_config.rviz
-config/default.rviz
-config/test_config.rviz
 ias0220_250620/__init__.py
 ias0220_250620/odometer.py
 ias0220_250620/random_walker.py
 ias0220_250620/test_node.py
+launch/differential_robot_simu_task4_part1.launch.py
 launch/differential_robot_task3_part2.launch.py
 launch/task2.launch.py
 resource/ias0220_250620
@@ -23,4 +22,5 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 urdf/differential_robot.urdf
+urdf/differential_robot_simu_task4_part1.urdf
 urdf/myFirst.urdf

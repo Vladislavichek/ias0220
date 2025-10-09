@@ -1,0 +1,401 @@
+[0.078s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.078s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x77355c84cc70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77355c966020>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77355c966020>>)
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.198s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vlados/ias0220'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'ros'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extensions ['cmake', 'python']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template) by extension 'python_setup_py'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'ros'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extensions ['cmake', 'python']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'cmake'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'python'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extensions ['python_setup_py']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template) by extension 'python_setup_py'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_interfaces) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package 'src/IAS0220_Task4_Template/Task4_template/encoders_interfaces' with type 'ros.ament_cmake' and name 'encoders_interfaces'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/encoders_pkg) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package 'src/IAS0220_Task4_Template/Task4_template/encoders_pkg' with type 'ros.ament_python' and name 'encoders_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package 'src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220' with type 'ros.ament_python' and name 'setup_gazebo_ias0220'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/ias0220_250620) by extension 'ros'
+[0.214s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ias0220_250620' with type 'ros.ament_python' and name 'ias0220_250620'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/transform_frame) by extension 'ros'
+[0.215s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transform_frame' with type 'ros.ament_cmake' and name 'transform_frame'
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.236s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.236s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.237s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/vlados/ias0220/install
+[0.239s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 295 installed packages in /opt/ros/humble
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.268s] Level 5:colcon.colcon_core.verb:set package 'encoders_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.268s] DEBUG:colcon.colcon_core.verb:Building package 'encoders_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vlados/ias0220/build/encoders_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vlados/ias0220/install/encoders_interfaces', 'merge_install': False, 'path': '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'cmake_target' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'cmake_clean_cache' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'cmake_clean_first' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'cmake_force_configure' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'ament_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'catkin_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'ias0220_250620' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.269s] DEBUG:colcon.colcon_core.verb:Building package 'ias0220_250620' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vlados/ias0220/build/ias0220_250620', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vlados/ias0220/install/ias0220_250620', 'merge_install': False, 'path': '/home/vlados/ias0220/src/ias0220_250620', 'symlink_install': False, 'test_result_base': None}
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'cmake_target' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'cmake_clean_cache' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'cmake_clean_first' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'cmake_force_configure' from command line to 'False'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'ament_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'catkin_cmake_args' from command line to 'None'
+[0.269s] Level 5:colcon.colcon_core.verb:set package 'setup_gazebo_ias0220' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.269s] DEBUG:colcon.colcon_core.verb:Building package 'setup_gazebo_ias0220' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vlados/ias0220/build/setup_gazebo_ias0220', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vlados/ias0220/install/setup_gazebo_ias0220', 'merge_install': False, 'path': '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220', 'symlink_install': False, 'test_result_base': None}
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'cmake_target' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'cmake_clean_cache' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'cmake_clean_first' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'cmake_force_configure' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'ament_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'catkin_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'transform_frame' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.270s] DEBUG:colcon.colcon_core.verb:Building package 'transform_frame' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vlados/ias0220/build/transform_frame', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vlados/ias0220/install/transform_frame', 'merge_install': False, 'path': '/home/vlados/ias0220/src/transform_frame', 'symlink_install': False, 'test_result_base': None}
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'cmake_target' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.270s] Level 5:colcon.colcon_core.verb:set package 'encoders_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.270s] DEBUG:colcon.colcon_core.verb:Building package 'encoders_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vlados/ias0220/build/encoders_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vlados/ias0220/install/encoders_pkg', 'merge_install': False, 'path': '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.271s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.271s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.272s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces' with build type 'ament_cmake'
+[0.272s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces'
+[0.274s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.277s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vlados/ias0220/src/ias0220_250620' with build type 'ament_python'
+[0.277s] Level 1:colcon.colcon_core.shell:create_environment_hook('ias0220_250620', 'ament_prefix_path')
+[0.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/hook/ament_prefix_path.ps1'
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/hook/ament_prefix_path.dsv'
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/hook/ament_prefix_path.sh'
+[0.279s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.279s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.281s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220' with build type 'ament_python'
+[0.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('setup_gazebo_ias0220', 'ament_prefix_path')
+[0.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/hook/ament_prefix_path.ps1'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/hook/ament_prefix_path.dsv'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/hook/ament_prefix_path.sh'
+[0.282s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.282s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.285s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vlados/ias0220/src/transform_frame' with build type 'ament_cmake'
+[0.285s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vlados/ias0220/src/transform_frame'
+[0.285s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.285s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/encoders_interfaces -- -j16 -l16
+[0.479s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vlados/ias0220/src/ias0220_250620'
+[0.480s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.480s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.684s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220'
+[0.685s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.685s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/transform_frame -- -j16 -l16
+[0.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/encoders_interfaces -- -j16 -l16
+[0.708s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/encoders_interfaces
+[0.763s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/transform_frame -- -j16 -l16
+[0.764s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/transform_frame
+[0.764s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(encoders_interfaces)
+[0.765s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/encoders_interfaces
+[0.766s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces' for CMake module files
+[0.767s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces' for CMake config files
+[0.767s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoders_interfaces', 'cmake_prefix_path')
+[0.767s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/cmake_prefix_path.ps1'
+[0.768s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/cmake_prefix_path.dsv'
+[0.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/cmake_prefix_path.sh'
+[0.768s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/lib'
+[0.768s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoders_interfaces', 'ld_library_path_lib')
+[0.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/ld_library_path_lib.ps1'
+[0.769s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/ld_library_path_lib.dsv'
+[0.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/ld_library_path_lib.sh'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/bin'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/lib/pkgconfig/encoders_interfaces.pc'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/lib/python3.10/site-packages'
+[0.770s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/bin'
+[0.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.ps1'
+[0.771s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.dsv'
+[0.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.sh'
+[0.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.bash'
+[0.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.zsh'
+[0.774s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/encoders_interfaces/share/colcon-core/packages/encoders_interfaces)
+[0.774s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(encoders_interfaces)
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces' for CMake module files
+[0.775s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces' for CMake config files
+[0.775s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoders_interfaces', 'cmake_prefix_path')
+[0.775s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/cmake_prefix_path.ps1'
+[0.776s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/cmake_prefix_path.dsv'
+[0.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/cmake_prefix_path.sh'
+[0.776s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/lib'
+[0.776s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoders_interfaces', 'ld_library_path_lib')
+[0.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/ld_library_path_lib.ps1'
+[0.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/ld_library_path_lib.dsv'
+[0.777s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/hook/ld_library_path_lib.sh'
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/bin'
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/lib/pkgconfig/encoders_interfaces.pc'
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/lib/python3.10/site-packages'
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_interfaces/bin'
+[0.778s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.ps1'
+[0.778s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.dsv'
+[0.778s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.sh'
+[0.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.bash'
+[0.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.zsh'
+[0.779s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/encoders_interfaces/share/colcon-core/packages/encoders_interfaces)
+[0.780s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_pkg' with build type 'ament_python'
+[0.780s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoders_pkg', 'ament_prefix_path')
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/hook/ament_prefix_path.ps1'
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/hook/ament_prefix_path.dsv'
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/hook/ament_prefix_path.sh'
+[0.781s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.781s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.784s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(transform_frame)
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame' for CMake module files
+[0.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vlados/ias0220/install/setup_gazebo_ias0220:/home/vlados/ias0220/install/ias0220_250620:/home/vlados/ias0220/install/encoders_pkg:/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/transform_frame
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame' for CMake config files
+[0.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('transform_frame', 'cmake_prefix_path')
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/transform_frame/share/transform_frame/hook/cmake_prefix_path.ps1'
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/transform_frame/share/transform_frame/hook/cmake_prefix_path.dsv'
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/transform_frame/share/transform_frame/hook/cmake_prefix_path.sh'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/lib'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/bin'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/lib/pkgconfig/transform_frame.pc'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/lib/python3.10/site-packages'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/bin'
+[0.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.ps1'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.dsv'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.sh'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.bash'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.zsh'
+[0.788s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/transform_frame/share/colcon-core/packages/transform_frame)
+[0.788s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(transform_frame)
+[0.788s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame' for CMake module files
+[0.788s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame' for CMake config files
+[0.789s] Level 1:colcon.colcon_core.shell:create_environment_hook('transform_frame', 'cmake_prefix_path')
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/transform_frame/share/transform_frame/hook/cmake_prefix_path.ps1'
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/transform_frame/share/transform_frame/hook/cmake_prefix_path.dsv'
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/transform_frame/share/transform_frame/hook/cmake_prefix_path.sh'
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/lib'
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/bin'
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/lib/pkgconfig/transform_frame.pc'
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/lib/python3.10/site-packages'
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/transform_frame/bin'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.ps1'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.dsv'
+[0.791s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.sh'
+[0.791s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.bash'
+[0.792s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/transform_frame/share/transform_frame/package.zsh'
+[0.792s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/transform_frame/share/colcon-core/packages/transform_frame)
+[0.972s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_pkg'
+[0.973s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.973s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220': PYTHONPATH=/home/vlados/ias0220/build/setup_gazebo_ias0220/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/setup_gazebo_ias0220 build --build-base /home/vlados/ias0220/build/setup_gazebo_ias0220/build install --record /home/vlados/ias0220/build/setup_gazebo_ias0220/install.log --single-version-externally-managed install_data
+[0.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/src/ias0220_250620': PYTHONPATH=/home/vlados/ias0220/build/ias0220_250620/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ias0220_250620 build --build-base /home/vlados/ias0220/build/ias0220_250620/build install --record /home/vlados/ias0220/build/ias0220_250620/install.log --single-version-externally-managed install_data
+[1.187s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620' for CMake module files
+[1.188s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/src/ias0220_250620' returned '0': PYTHONPATH=/home/vlados/ias0220/build/ias0220_250620/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ias0220_250620 build --build-base /home/vlados/ias0220/build/ias0220_250620/build install --record /home/vlados/ias0220/build/ias0220_250620/install.log --single-version-externally-managed install_data
+[1.188s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620' for CMake config files
+[1.189s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620/lib'
+[1.189s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620/bin'
+[1.189s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620/lib/pkgconfig/ias0220_250620.pc'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages'
+[1.190s] Level 1:colcon.colcon_core.shell:create_environment_hook('ias0220_250620', 'pythonpath')
+[1.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/hook/pythonpath.ps1'
+[1.190s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/hook/pythonpath.dsv'
+[1.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/hook/pythonpath.sh'
+[1.192s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/ias0220_250620/bin'
+[1.192s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ias0220_250620)
+[1.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/package.ps1'
+[1.193s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/package.dsv'
+[1.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/package.sh'
+[1.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/package.bash'
+[1.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/package.zsh'
+[1.195s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/ias0220_250620/share/colcon-core/packages/ias0220_250620)
+[1.196s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220' for CMake module files
+[1.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/setup_gazebo_ias0220' returned '0': PYTHONPATH=/home/vlados/ias0220/build/setup_gazebo_ias0220/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/setup_gazebo_ias0220 build --build-base /home/vlados/ias0220/build/setup_gazebo_ias0220/build install --record /home/vlados/ias0220/build/setup_gazebo_ias0220/install.log --single-version-externally-managed install_data
+[1.197s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220' for CMake config files
+[1.197s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220/lib'
+[1.197s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220/bin'
+[1.197s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/pkgconfig/setup_gazebo_ias0220.pc'
+[1.198s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages'
+[1.198s] Level 1:colcon.colcon_core.shell:create_environment_hook('setup_gazebo_ias0220', 'pythonpath')
+[1.198s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/hook/pythonpath.ps1'
+[1.198s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/hook/pythonpath.dsv'
+[1.198s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/hook/pythonpath.sh'
+[1.199s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/setup_gazebo_ias0220/bin'
+[1.199s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(setup_gazebo_ias0220)
+[1.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/package.ps1'
+[1.199s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/package.dsv'
+[1.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/package.sh'
+[1.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/package.bash'
+[1.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/setup_gazebo_ias0220/share/setup_gazebo_ias0220/package.zsh'
+[1.200s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/setup_gazebo_ias0220/share/colcon-core/packages/setup_gazebo_ias0220)
+[1.221s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_pkg': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/encoders_interfaces:/home/vlados/ias0220/install/transform_frame PYTHONPATH=/home/vlados/ias0220/build/encoders_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/encoders_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/encoders_pkg build --build-base /home/vlados/ias0220/build/encoders_pkg/build install --record /home/vlados/ias0220/build/encoders_pkg/install.log --single-version-externally-managed install_data
+[1.430s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg' for CMake module files
+[1.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_pkg' returned '0': CMAKE_PREFIX_PATH=/home/vlados/ias0220/install/encoders_interfaces:/home/vlados/ias0220/install/transform_frame PYTHONPATH=/home/vlados/ias0220/build/encoders_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/encoders_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/encoders_pkg build --build-base /home/vlados/ias0220/build/encoders_pkg/build install --record /home/vlados/ias0220/build/encoders_pkg/install.log --single-version-externally-managed install_data
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg' for CMake config files
+[1.432s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg/lib'
+[1.432s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg/bin'
+[1.432s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg/lib/pkgconfig/encoders_pkg.pc'
+[1.432s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg/lib/python3.10/site-packages'
+[1.433s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoders_pkg', 'pythonpath')
+[1.433s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/hook/pythonpath.ps1'
+[1.433s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/hook/pythonpath.dsv'
+[1.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/hook/pythonpath.sh'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/vlados/ias0220/install/encoders_pkg/bin'
+[1.435s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(encoders_pkg)
+[1.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/package.ps1'
+[1.436s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/package.dsv'
+[1.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/package.sh'
+[1.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/package.bash'
+[1.438s] INFO:colcon.colcon_core.shell:Creating package script '/home/vlados/ias0220/install/encoders_pkg/share/encoders_pkg/package.zsh'
+[1.438s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vlados/ias0220/install/encoders_pkg/share/colcon-core/packages/encoders_pkg)
+[1.438s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.439s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.439s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.439s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.446s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.447s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.447s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.447s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.480s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.480s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vlados/ias0220/install/local_setup.ps1'
+[1.481s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vlados/ias0220/install/_local_setup_util_ps1.py'
+[1.483s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vlados/ias0220/install/setup.ps1'
+[1.485s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vlados/ias0220/install/local_setup.sh'
+[1.486s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vlados/ias0220/install/_local_setup_util_sh.py'
+[1.486s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vlados/ias0220/install/setup.sh'
+[1.488s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vlados/ias0220/install/local_setup.bash'
+[1.489s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vlados/ias0220/install/setup.bash'
+[1.490s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vlados/ias0220/install/local_setup.zsh'
+[1.491s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vlados/ias0220/install/setup.zsh'

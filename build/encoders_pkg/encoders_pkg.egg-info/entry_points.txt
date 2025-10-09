@@ -1,0 +1,3 @@
+[console_scripts]
+encoders_node = encoders_pkg.encoders:main
+

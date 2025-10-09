@@ -36,6 +36,8 @@
 
     <xacro:property name = "PASSIVE_WHEEL_XX_YY_ZZ_INERTIA" value = "${(2/5)*PASSIVE_WHEEL_MASS*(SUPPORT_WIDTH/2)**2}"/>
 
+
+
     <!-- 
     Parameters:
         prefix - name the side of the wheel (right/left)
@@ -61,6 +63,14 @@
             </inertial>
             
         </link>
+
+        <gazebo reference="${prefix}_wheel">
+            <mu1>1</mu1>
+            <mu2>0.1</mu2>
+            <kp>1000000</kp>
+            <kd>1</kd>
+            <material>Gazebo/Black</material>
+        </gazebo>
         
     </xacro:macro>
 
@@ -136,8 +146,6 @@
     </material>
 
 
-
-
     <link name="base_footprint"/>
 
     <link name="base_link">
@@ -160,6 +168,13 @@
         </inertial>
     </link>
 
+    <gazebo reference="base_link">
+        <material>
+            Gazebo/Red
+        </material>
+    </gazebo>
+
+
     <link name="head_link">
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -179,6 +194,13 @@
             <inertia ixx="${HEAD_XX_YY_ZZ_INERTIA}" ixy="0.0" ixz="0.0" iyy="${HEAD_XX_YY_ZZ_INERTIA}" iyz="0.0" izz="${HEAD_XX_YY_ZZ_INERTIA}"/>
         </inertial>
     </link>
+
+    <gazebo reference="head_link">
+        <material>
+            Gazebo/Blue
+        </material>
+    </gazebo>
+
 
     <link name="passive_wheel_holder">
         <visual>
@@ -217,6 +239,13 @@
             <inertia ixx="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}" ixy="0.0" ixz="0.0" iyy="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}" iyz="0.0" izz="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}"/>
         </inertial>
     </link>
+
+    <gazebo reference="passive_wheel">
+        <mu1>0.0</mu1>
+        <mu2>0.0</mu2>
+        <kp>100000.0</kp>
+        <kd>0.5</kd>
+    </gazebo>
 
     
 
@@ -263,4 +292,10 @@
         <parent link="base_footprint"/>
         <child link="base_link"/>
     </joint>
+
+
+
+    <gazebo reference = "base_link">
+        <kp>1000000.0</kp>
+    </gazebo>
 </robot>

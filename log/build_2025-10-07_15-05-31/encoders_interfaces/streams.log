@@ -1,0 +1,227 @@
+[0.018s] Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/encoders_interfaces
+[0.378s] -- The C compiler identification is GNU 11.4.0
+[0.379s] -- The CXX compiler identification is GNU 11.4.0
+[0.379s] -- Detecting C compiler ABI info
+[0.379s] -- Detecting C compiler ABI info - done
+[0.379s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.379s] -- Detecting C compile features
+[0.379s] -- Detecting C compile features - done
+[0.379s] -- Detecting CXX compiler ABI info
+[0.442s] -- Detecting CXX compiler ABI info - done
+[0.448s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.448s] -- Detecting CXX compile features
+[0.449s] -- Detecting CXX compile features - done
+[0.452s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.570s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.663s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.670s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.681s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.728s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.977s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.166s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.414s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.439s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.442s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.475s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.475s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.475s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.475s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.498s] -- Found PythonExtra: .so  
+[1.537s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.571s] -- Added test 'lint_cmake' to check CMake code style
+[1.572s] -- Added test 'xmllint' to check XML markup files
+[1.574s] -- Configuring done
+[1.598s] -- Generating done
+[1.606s] -- Build files have been written to: /home/vlados/ias0220/build/encoders_interfaces
+[1.613s] Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/encoders_interfaces
+[1.615s] Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/encoders_interfaces -- -j16 -l16
+[1.657s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.666s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.676s] [  6%] Built target ament_cmake_python_copy_encoders_interfaces
+[1.848s] running egg_info
+[1.849s] creating encoders_interfaces.egg-info
+[1.849s] writing encoders_interfaces.egg-info/PKG-INFO
+[1.849s] writing dependency_links to encoders_interfaces.egg-info/dependency_links.txt
+[1.849s] writing top-level names to encoders_interfaces.egg-info/top_level.txt
+[1.849s] writing manifest file 'encoders_interfaces.egg-info/SOURCES.txt'
+[1.851s] reading manifest file 'encoders_interfaces.egg-info/SOURCES.txt'
+[1.851s] writing manifest file 'encoders_interfaces.egg-info/SOURCES.txt'
+[1.852s] [  6%] Built target encoders_interfaces__cpp
+[1.859s] [  9%] [32mBuilding C object CMakeFiles/encoders_interfaces__rosidl_generator_c.dir/rosidl_generator_c/encoders_interfaces/msg/detail/counter__functions.c.o[0m
+[1.861s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.862s] [ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.864s] [ 19%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.871s] [ 19%] Built target ament_cmake_python_build_encoders_interfaces_egg
+[1.920s] [ 22%] [32m[1mLinking C shared library libencoders_interfaces__rosidl_generator_c.so[0m
+[1.958s] [ 22%] Built target encoders_interfaces__rosidl_generator_c
+[1.966s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.967s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.968s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.022s] [ 35%] [32mBuilding CXX object CMakeFiles/encoders_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/encoders_interfaces/msg/counter__type_support.cpp.o[0m
+[2.036s] [ 38%] [32mBuilding CXX object CMakeFiles/encoders_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/encoders_interfaces/msg/detail/counter__type_support.cpp.o[0m
+[2.048s] [ 41%] [32mBuilding CXX object CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/encoders_interfaces/msg/detail/dds_fastrtps/counter__type_support.cpp.o[0m
+[2.129s] [ 45%] [32mBuilding CXX object CMakeFiles/encoders_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/encoders_interfaces/msg/counter__type_support.cpp.o[0m
+[2.146s] [ 48%] [32mBuilding CXX object CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/encoders_interfaces/msg/detail/counter__type_support_c.cpp.o[0m
+[2.156s] [ 54%] [32mBuilding C object CMakeFiles/encoders_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/encoders_interfaces/msg/detail/counter__type_support.c.o[0m
+[2.157s] [ 54%] [32m[1mLinking CXX shared library libencoders_interfaces__rosidl_typesupport_c.so[0m
+[2.187s] [ 58%] [32m[1mLinking C shared library libencoders_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.191s] [ 58%] Built target encoders_interfaces__rosidl_typesupport_c
+[2.213s] [ 58%] Built target encoders_interfaces__rosidl_typesupport_introspection_c
+[2.253s] [ 61%] [32m[1mLinking CXX shared library libencoders_interfaces__rosidl_typesupport_cpp.so[0m
+[2.296s] [ 61%] Built target encoders_interfaces__rosidl_typesupport_cpp
+[2.337s] [ 67%] [32m[1mLinking CXX shared library libencoders_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.337s] [ 67%] [32m[1mLinking CXX shared library libencoders_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.380s] [ 67%] Built target encoders_interfaces__rosidl_typesupport_introspection_cpp
+[2.385s] [ 70%] [32m[1mLinking CXX shared library libencoders_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.405s] [ 70%] Built target encoders_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.443s] [ 70%] Built target encoders_interfaces__rosidl_typesupport_fastrtps_c
+[2.463s] [ 70%] Built target encoders_interfaces
+[2.480s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.692s] [ 74%] Built target encoders_interfaces__py
+[2.709s] [ 77%] [32mBuilding C object CMakeFiles/encoders_interfaces__rosidl_generator_py.dir/rosidl_generator_py/encoders_interfaces/msg/_counter_s.c.o[0m
+[2.819s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/encoders_interfaces/libencoders_interfaces__rosidl_generator_py.so[0m
+[2.863s] [ 80%] Built target encoders_interfaces__rosidl_generator_py
+[2.886s] [ 83%] [32mBuilding C object CMakeFiles/encoders_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/encoders_interfaces/_encoders_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.888s] [ 87%] [32mBuilding C object CMakeFiles/encoders_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/encoders_interfaces/_encoders_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.889s] [ 90%] [32mBuilding C object CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/encoders_interfaces/_encoders_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.962s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.964s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.966s] [100%] [32m[1mLinking C shared library rosidl_generator_py/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.992s] [100%] Built target encoders_interfaces__rosidl_typesupport_c__pyext
+[3.000s] [100%] Built target encoders_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.001s] [100%] Built target encoders_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.012s] Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/encoders_interfaces -- -j16 -l16
+[3.013s] Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/encoders_interfaces
+[3.020s] -- Install configuration: ""
+[3.020s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/ament_index/resource_index/rosidl_interfaces/encoders_interfaces
+[3.020s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__struct.h
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__type_support.h
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__functions.h
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__functions.c
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.021s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/counter.h
+[3.022s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/library_path.sh
+[3.022s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/library_path.dsv
+[3.022s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_generator_c.so
+[3.023s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_generator_c.so" to ""
+[3.023s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces
+[3.023s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg
+[3.023s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail
+[3.023s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__rosidl_typesupport_fastrtps_c.h
+[3.023s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.023s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.024s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.024s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces
+[3.024s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg
+[3.024s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail
+[3.024s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__type_support.c
+[3.024s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__rosidl_typesupport_introspection_c.h
+[3.024s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.024s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_introspection_c.so
+[3.025s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.025s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_c.so
+[3.025s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_c.so" to ""
+[3.025s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces
+[3.025s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg
+[3.025s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__builder.hpp
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__traits.hpp
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__type_support.hpp
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__struct.hpp
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/counter.hpp
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.026s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces
+[3.026s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg
+[3.026s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.026s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail
+[3.027s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__rosidl_typesupport_fastrtps_cpp.hpp
+[3.027s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/dds_fastrtps
+[3.027s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.027s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.027s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces
+[3.027s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg
+[3.028s] -- Up-to-date: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail
+[3.028s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__rosidl_typesupport_introspection_cpp.hpp
+[3.028s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/include/encoders_interfaces/encoders_interfaces/msg/detail/counter__type_support.cpp
+[3.028s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.028s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.028s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_cpp.so
+[3.029s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.029s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/pythonpath.sh
+[3.029s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/pythonpath.dsv
+[3.029s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces-0.0.0-py3.10.egg-info
+[3.029s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[3.029s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.030s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[3.030s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.030s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces
+[3.030s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg
+[3.030s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg/__init__.py
+[3.030s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg/_counter_s.c
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg/_counter.py
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/__init__.py
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/_encoders_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.031s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/libencoders_interfaces__rosidl_generator_py.so
+[3.032s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/_encoders_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.032s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/_encoders_interfaces_s.ep.rosidl_typesupport_c.c
+[3.060s] Listing '/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces'...
+[3.060s] Compiling '/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/__init__.py'...
+[3.060s] Listing '/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg'...
+[3.060s] Compiling '/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg/__init__.py'...
+[3.060s] Compiling '/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/msg/_counter.py'...
+[3.063s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.063s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.063s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.064s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.064s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.064s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/local/lib/python3.10/dist-packages/encoders_interfaces/encoders_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.064s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_generator_py.so
+[3.064s] -- Set runtime path of "/home/vlados/ias0220/install/encoders_interfaces/lib/libencoders_interfaces__rosidl_generator_py.so" to ""
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/msg/Counter.idl
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/msg/Counter.msg
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/ament_index/resource_index/package_run_dependencies/encoders_interfaces
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/ament_index/resource_index/parent_prefix_path/encoders_interfaces
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/ament_prefix_path.sh
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/ament_prefix_path.dsv
+[3.065s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/path.sh
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/environment/path.dsv
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/local_setup.bash
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/local_setup.sh
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/local_setup.zsh
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/local_setup.dsv
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.dsv
+[3.066s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/ament_index/resource_index/packages/encoders_interfaces
+[3.067s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_generator_cExport.cmake
+[3.067s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.067s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.067s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.067s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.067s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_cExport.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_generator_cppExport.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.068s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_cppExport.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_generator_pyExport.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/export_encoders_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.069s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfacesConfig.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/cmake/encoders_interfacesConfig-version.cmake
+[3.070s] -- Installing: /home/vlados/ias0220/install/encoders_interfaces/share/encoders_interfaces/package.xml
+[3.074s] Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/encoders_interfaces

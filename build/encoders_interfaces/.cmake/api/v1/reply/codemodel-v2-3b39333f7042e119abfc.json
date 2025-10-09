@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-e7e2028dcca76cb58df0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "encoders_interfaces__py",
+					"jsonFile" : "directory-encoders_interfaces__py-e8b1e29b581fb2438f82.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/vlados/ias0220/build/encoders_interfaces/encoders_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "encoders_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_encoders_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_encoders_interfaces_egg-115be684055cf7a4b914.json",
+					"name" : "ament_cmake_python_build_encoders_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_encoders_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_encoders_interfaces-1e128fb67700a0e0d453.json",
+					"name" : "ament_cmake_python_copy_encoders_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces-1240290c6c715fa12fbd.json",
+					"name" : "encoders_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__cpp-2865c2d8abb3d6094ad6.json",
+					"name" : "encoders_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "encoders_interfaces__py::@e9d96785e9be35c144eb",
+					"jsonFile" : "target-encoders_interfaces__py-17a2be8f900f64cbbbeb.json",
+					"name" : "encoders_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_generator_c-df4a7d2e735408b205b3.json",
+					"name" : "encoders_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_generator_py-c1aadbbbed9af47053ea.json",
+					"name" : "encoders_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_c-0de9f1ba32cef282fb47.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_c__pyext-c7a7095bb551600c3736.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_cpp-18b1b89a6b15c332ba6b.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_fastrtps_c-fdffc45731cbf2bb063c.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_fastrtps_c__pyext-d703b5fe779b3eff2cc0.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_fastrtps_cpp-b18055a687c10b513b37.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_introspection_c-38400e3acff187a35dd9.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_introspection_c__pyext-b1b5880baaeddcaa7d45.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces__rosidl_typesupport_introspection_cpp-1d01d183b506b62b14be.json",
+					"name" : "encoders_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encoders_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoders_interfaces_uninstall-8454f133b73a9cca919c.json",
+					"name" : "encoders_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-bbd0470607901cabcb02.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/vlados/ias0220/build/encoders_interfaces",
+		"source" : "/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

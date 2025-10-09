@@ -1,0 +1,6 @@
+Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/encoders_interfaces
+Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/encoders_interfaces
+Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/encoders_interfaces -- -j16 -l16
+Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/encoders_interfaces -- -j16 -l16
+Invoking command in '/home/vlados/ias0220/build/encoders_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/encoders_interfaces
+Invoked command in '/home/vlados/ias0220/build/encoders_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/encoders_interfaces

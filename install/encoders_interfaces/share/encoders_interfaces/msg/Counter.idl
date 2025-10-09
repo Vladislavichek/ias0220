@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from encoders_interfaces/msg/Counter.msg
+// generated code does not contain a copyright notice
+
+
+module encoders_interfaces {
+  module msg {
+    struct Counter {
+      int64 count_left;
+
+      int64 count_right;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+source;share/encoders_interfaces/local_setup.bash
+source;share/encoders_interfaces/local_setup.dsv
+source;share/encoders_interfaces/local_setup.sh
+source;share/encoders_interfaces/local_setup.zsh

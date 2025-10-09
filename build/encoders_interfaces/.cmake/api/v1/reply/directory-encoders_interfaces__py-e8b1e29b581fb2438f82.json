@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "encoders_interfaces__py",
+		"source" : "/home/vlados/ias0220/build/encoders_interfaces/encoders_interfaces__py"
+	}
+}
