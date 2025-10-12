@@ -114,7 +114,7 @@
     -->
     <xacro:macro name = "wheel_to_rotation_marker" params = "prefix side">
         <joint name="${prefix}_rotation_marker_joint" type="fixed">
-            <origin xyz="0.0 ${side * WHEEL_RADIUS/2} 0.0041" rpy="0.0 0.0 0.0"/> 
+            <origin xyz="0 ${side * WHEEL_RADIUS/2} 0.0041" rpy="0.0 0.0 0.0"/> 
             <!-- Moved the marker out of the wheel for 
                  half a wheel and a marker width away -->
 
@@ -257,11 +257,11 @@
 
 
 
-    <xacro:wheel_joint prefix = "right" direction = "1"/>
-    <xacro:wheel_joint prefix = "left" direction = "-1"/>
+    <xacro:wheel_joint prefix = "right" direction = "-1"/>
+    <xacro:wheel_joint prefix = "left" direction = "1"/>
 
-    <xacro:wheel_to_rotation_marker prefix = "right" side = "-1"/>
-    <xacro:wheel_to_rotation_marker prefix = "left" side = "1"/>
+    <xacro:wheel_to_rotation_marker prefix = "right" side = "1"/>
+    <xacro:wheel_to_rotation_marker prefix = "left" side = "-1"/>
 
     <joint name="passive_wheel_holder_to_wheel" type="fixed">
         <origin xyz="0.0 0.0 ${-WHEEL_HOLDER_HEIGHT/2}" rpy="0.0 0.0 0.0"/>
