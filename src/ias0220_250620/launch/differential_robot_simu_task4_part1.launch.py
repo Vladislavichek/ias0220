@@ -25,7 +25,7 @@ def generate_launch_description():
         default=os.path.join(
             get_package_share_directory(package_name),
             "config",
-            "Task_2-1_config.rviz",
+            "Task_4-1_config.rviz",
         ),
     )
 
@@ -56,20 +56,20 @@ def generate_launch_description():
     #     name="joint_state_publisher_gui",
     # )
 
-    move_node = Node(
-        package="transform_frame",
-        executable="move",
-        name="move",
-        output="screen",
-    )
+    # move_node = Node(
+    #     package="transform_frame",
+    #     executable="move",
+    #     name="move",
+    #     output="screen",
+    # )
 
     teleop_twist_node = Node(
         package="teleop_twist_keyboard",
         executable="teleop_twist_keyboard",
         name="teleop_twist_keyboard",
-        remappings=[
-            ("/cmd_vel", "move/cmd_vel")
-        ],
+        # remappings=[
+        #     ("/cmd_vel", "move/cmd_vel")
+        # ],
         output="screen",
         prefix="konsole -e"
     )
@@ -85,7 +85,7 @@ def generate_launch_description():
             gazebo_launch,
             rviz_node,
             # joint_state_publisher_gui_node,
-            move_node,
+            # move_node,
             teleop_twist_node,
             rqt_node,
         ]

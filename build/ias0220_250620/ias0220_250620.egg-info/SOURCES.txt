@@ -10,6 +10,7 @@ setup.py
 ../../build/ias0220_250620/ias0220_250620.egg-info/top_level.txt
 ../../build/ias0220_250620/ias0220_250620.egg-info/zip-safe
 config/Task_2-1_config.rviz
+config/task_4-1_config.rviz
 ias0220_250620/__init__.py
 ias0220_250620/odometer.py
 ias0220_250620/random_walker.py
