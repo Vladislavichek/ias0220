@@ -86,7 +86,7 @@ class EncodersNode(Node):
                 f'Could not transform wheel to body: {ex}')
             return
         self.msg.count_left = self.get_count(rot_left)
-        self.msg.count_right = self.get_count(rot_right)
+        self.msg.count_right = -self.get_count(rot_right)
         self.count_publisher.publish(self.msg)
 
 def main():

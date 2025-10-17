@@ -50,6 +50,14 @@ def generate_launch_description():
         arguments=["--display-config", rvizconfig],
     )
 
+    launch_encoders = Node(
+        package='encoders_pkg',
+        executable='encoders_node',
+        name='encoders_node',
+        output='screen',
+
+    )
+
     # joint_state_publisher_gui_node = Node(
     #     package="joint_state_publisher_gui",
     #     executable="joint_state_publisher_gui",
@@ -84,6 +92,7 @@ def generate_launch_description():
         [
             gazebo_launch,
             rviz_node,
+            launch_encoders,
             # joint_state_publisher_gui_node,
             # move_node,
             teleop_twist_node,
