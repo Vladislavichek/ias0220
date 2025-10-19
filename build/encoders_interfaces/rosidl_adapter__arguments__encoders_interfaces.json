@@ -1,6 +1,6 @@
 {
   "package_name": "encoders_interfaces",
   "non_idl_tuples": [
-    "/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces:msg/Counter.msg"
+    "/home/vlados/ias0220/src/encoders_interfaces:msg/Counter.msg"
   ]
 }

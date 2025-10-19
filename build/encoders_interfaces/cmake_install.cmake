@@ -1,4 +1,4 @@
-# Install script for directory: /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces
+# Install script for directory: /home/vlados/ias0220/src/encoders_interfaces
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -360,7 +360,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoders_interfaces/msg" TYPE FILE FILES "/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces/msg/Counter.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoders_interfaces/msg" TYPE FILE FILES "/home/vlados/ias0220/src/encoders_interfaces/msg/Counter.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -615,7 +615,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoders_interfaces" TYPE FILE FILES "/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoders_interfaces" TYPE FILE FILES "/home/vlados/ias0220/src/encoders_interfaces/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

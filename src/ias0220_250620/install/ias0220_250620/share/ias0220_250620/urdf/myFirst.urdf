@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<robot name = "my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="foot_length" value = "0.6"/>
+    <xacro:property name="foot_width" value = "0.1"/>
+    <xacro:property name="foot_height" value = "0.2"/>
+
+    <xacro:macro name = "foot_link" params = "prefix">
+        <link name="${prefix}_leg">
+            <visual>
+                <geometry>
+                    <box size="${foot_length} ${foot_width} ${foot_height}"/>
+                </geometry>
+                <origin xyz="0.0 0.0 -0.3" rpy="0.0 1.57075 0.0"/>
+                <material name="white"/>
+            </visual>
+        </link>
+    </xacro:macro>
+
+    <xacro:macro name = "foot_joint" params = "prefix position">
+        <joint name="base_to_${prefix}_leg" type="fixed">
+            <parent link="base_link"/>
+            <child link="${prefix}_leg"/>
+            <origin xyz="${position}"/>
+        </joint>
+    </xacro:macro>
+
+
+    <material name="blue">
+        <color rgba="0.0 0.0 0.8 1.0"/>
+    </material>
+
+    <material name="white">
+        <color rgba="1 1 1 1.0"/>
+    </material>
+
+    <link name = "base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.6" radius="0.2"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.6" radius="0.2"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+        </inertial>
+    </link>
+
+    <link name="head">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                    <sphere radius="0.2"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        
+    </link>
+
+    <xacro:foot_link prefix="right"/>
+    <xacro:foot_link prefix="left"/>
+
+
+    <joint name="head_swivel" type="fixed">
+        <parent link="base_link"/>
+        <child link="head"/>
+        <origin xyz="0.0 0.0 0.3"/>
+    </joint>
+
+    <xacro:foot_joint prefix="right" position="0 -0.22 0.25"/>
+    <xacro:foot_joint prefix="left" position="0 0.22 0.25"/>
+</robot>

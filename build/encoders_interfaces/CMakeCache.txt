@@ -358,7 +358,7 @@ encoders_interfaces_BINARY_DIR:STATIC=/home/vlados/ias0220/build/encoders_interf
 encoders_interfaces_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-encoders_interfaces_SOURCE_DIR:STATIC=/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces
+encoders_interfaces_SOURCE_DIR:STATIC=/home/vlados/ias0220/src/encoders_interfaces
 
 //Dependencies for the target
 encoders_interfaces__rosidl_generator_c_LIB_DEPENDS:STATIC=general;rosidl_runtime_c::rosidl_runtime_c;general;rcutils::rcutils;
@@ -544,7 +544,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/vlados/ias0220/src/encoders_interfaces
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

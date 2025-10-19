@@ -1,6 +1,0 @@
-Invoking command in '/home/vlados/ros2_ws/build/ias0220_250620': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ros2_ws/src/ias0220_250620 -DCMAKE_INSTALL_PREFIX=/home/vlados/ros2_ws/install/ias0220_250620
-Invoked command in '/home/vlados/ros2_ws/build/ias0220_250620' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ros2_ws/src/ias0220_250620 -DCMAKE_INSTALL_PREFIX=/home/vlados/ros2_ws/install/ias0220_250620
-Invoking command in '/home/vlados/ros2_ws/build/ias0220_250620': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ros2_ws/build/ias0220_250620 -- -j16 -l16
-Invoked command in '/home/vlados/ros2_ws/build/ias0220_250620' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ros2_ws/build/ias0220_250620 -- -j16 -l16
-Invoking command in '/home/vlados/ros2_ws/build/ias0220_250620': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ros2_ws/build/ias0220_250620
-Invoked command in '/home/vlados/ros2_ws/build/ias0220_250620' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ros2_ws/build/ias0220_250620

@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces
+CMAKE_SOURCE_DIR = /home/vlados/ias0220/src/encoders_interfaces
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/vlados/ias0220/build/encoders_interfaces
@@ -126,6 +126,6 @@ CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean:
 
 CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/encoders_interfaces/msg/detail/counter__rosidl_typesupport_fastrtps_cpp.hpp
 CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/encoders_interfaces/msg/detail/dds_fastrtps/counter__type_support.cpp
-	cd /home/vlados/ias0220/build/encoders_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces/CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vlados/ias0220/build/encoders_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlados/ias0220/src/encoders_interfaces /home/vlados/ias0220/src/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces/CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/encoders_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend
 

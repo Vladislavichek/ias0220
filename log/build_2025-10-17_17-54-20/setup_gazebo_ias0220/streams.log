@@ -1,0 +1,20 @@
+[0.691s] Invoking command in '/home/vlados/ias0220/src/setup_gazebo_ias0220': PYTHONPATH=/home/vlados/ias0220/build/setup_gazebo_ias0220/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/setup_gazebo_ias0220 build --build-base /home/vlados/ias0220/build/setup_gazebo_ias0220/build install --record /home/vlados/ias0220/build/setup_gazebo_ias0220/install.log --single-version-externally-managed install_data
+[0.866s] running egg_info
+[0.866s] writing ../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/PKG-INFO
+[0.866s] writing dependency_links to ../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/dependency_links.txt
+[0.867s] writing entry points to ../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/entry_points.txt
+[0.867s] writing requirements to ../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/requires.txt
+[0.867s] writing top-level names to ../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/top_level.txt
+[0.868s] reading manifest file '../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/SOURCES.txt'
+[0.870s] writing manifest file '../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info/SOURCES.txt'
+[0.870s] running build
+[0.870s] running build_py
+[0.870s] running install
+[0.870s] running install_lib
+[0.871s] running install_data
+[0.871s] running install_egg_info
+[0.873s] removing '/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages/setup_gazebo_ias0220-0.0.0-py3.10.egg-info' (and everything under it)
+[0.874s] Copying ../../build/setup_gazebo_ias0220/setup_gazebo_ias0220.egg-info to /home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages/setup_gazebo_ias0220-0.0.0-py3.10.egg-info
+[0.874s] running install_scripts
+[0.891s] writing list of installed files to '/home/vlados/ias0220/build/setup_gazebo_ias0220/install.log'
+[0.911s] Invoked command in '/home/vlados/ias0220/src/setup_gazebo_ias0220' returned '0': PYTHONPATH=/home/vlados/ias0220/build/setup_gazebo_ias0220/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/setup_gazebo_ias0220/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/setup_gazebo_ias0220 build --build-base /home/vlados/ias0220/build/setup_gazebo_ias0220/build install --record /home/vlados/ias0220/build/setup_gazebo_ias0220/install.log --single-version-externally-managed install_data

@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces
+CMAKE_SOURCE_DIR = /home/vlados/ias0220/src/encoders_interfaces
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/vlados/ias0220/build/encoders_interfaces
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_encoders_interfaces.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_encoders_interfaces.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_encoders_interfaces.dir/depend:
-	cd /home/vlados/ias0220/build/encoders_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces/CMakeFiles/ament_cmake_python_copy_encoders_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vlados/ias0220/build/encoders_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlados/ias0220/src/encoders_interfaces /home/vlados/ias0220/src/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces/CMakeFiles/ament_cmake_python_copy_encoders_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_encoders_interfaces.dir/depend
 

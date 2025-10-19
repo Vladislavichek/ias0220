@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces
+CMAKE_SOURCE_DIR = /home/vlados/ias0220/src/encoders_interfaces
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/vlados/ias0220/build/encoders_interfaces
@@ -66,7 +66,7 @@ include CMakeFiles/encoders_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/encoders_interfaces.dir/progress.make
 
-CMakeFiles/encoders_interfaces: /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces/msg/Counter.msg
+CMakeFiles/encoders_interfaces: /home/vlados/ias0220/src/encoders_interfaces/msg/Counter.msg
 
 encoders_interfaces: CMakeFiles/encoders_interfaces
 encoders_interfaces: CMakeFiles/encoders_interfaces.dir/build.make
@@ -81,6 +81,6 @@ CMakeFiles/encoders_interfaces.dir/clean:
 .PHONY : CMakeFiles/encoders_interfaces.dir/clean
 
 CMakeFiles/encoders_interfaces.dir/depend:
-	cd /home/vlados/ias0220/build/encoders_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces /home/vlados/ias0220/src/IAS0220_Task4_Template/Task4_template/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces/CMakeFiles/encoders_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vlados/ias0220/build/encoders_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlados/ias0220/src/encoders_interfaces /home/vlados/ias0220/src/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces /home/vlados/ias0220/build/encoders_interfaces/CMakeFiles/encoders_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/encoders_interfaces.dir/depend
 

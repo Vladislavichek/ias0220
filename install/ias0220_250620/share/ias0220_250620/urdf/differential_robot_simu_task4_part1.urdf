@@ -293,6 +293,20 @@
     </joint>
 
 
+    <gazebo>
+        <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <ros>
+            <remapping>odom:=ground_truth</remapping>
+        </ros>
+        <update_rate>50.0</update_rate>
+        <body_name>base_footprint</body_name>
+        <gaussian_noise>0.0</gaussian_noise>
+        <frame_name>odom</frame_name>
+        <xyz_offset>0 0 0</xyz_offset>
+        <rpy_offset>0 0 0</rpy_offset>
+        </plugin> 
+    </gazebo>
+
 
     <gazebo>
         <plugin name="diff_rob" filename="libgazebo_ros_diff_drive.so">

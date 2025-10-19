@@ -1,0 +1,24 @@
+[0.668s] Invoking command in '/home/vlados/ias0220/src/ias0220_250620': PYTHONPATH=/home/vlados/ias0220/build/ias0220_250620/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ias0220_250620 build --build-base /home/vlados/ias0220/build/ias0220_250620/build install --record /home/vlados/ias0220/build/ias0220_250620/install.log --single-version-externally-managed install_data
+[0.836s] running egg_info
+[0.837s] writing ../../build/ias0220_250620/ias0220_250620.egg-info/PKG-INFO
+[0.837s] writing dependency_links to ../../build/ias0220_250620/ias0220_250620.egg-info/dependency_links.txt
+[0.837s] writing entry points to ../../build/ias0220_250620/ias0220_250620.egg-info/entry_points.txt
+[0.837s] writing requirements to ../../build/ias0220_250620/ias0220_250620.egg-info/requires.txt
+[0.837s] writing top-level names to ../../build/ias0220_250620/ias0220_250620.egg-info/top_level.txt
+[0.839s] reading manifest file '../../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+[0.839s] adding license file 'LICENSE'
+[0.839s] writing manifest file '../../build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+[0.839s] running build
+[0.839s] running build_py
+[0.839s] running install
+[0.840s] running install_lib
+[0.841s] running install_data
+[0.841s] running install_egg_info
+[0.842s] removing '/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620-0.0.0-py3.10.egg-info' (and everything under it)
+[0.842s] Copying ../../build/ias0220_250620/ias0220_250620.egg-info to /home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620-0.0.0-py3.10.egg-info
+[0.843s] running install_scripts
+[0.857s] Installing odometer script to /home/vlados/ias0220/install/ias0220_250620/lib/ias0220_250620
+[0.857s] Installing odometry script to /home/vlados/ias0220/install/ias0220_250620/lib/ias0220_250620
+[0.857s] Installing random_walker script to /home/vlados/ias0220/install/ias0220_250620/lib/ias0220_250620
+[0.858s] writing list of installed files to '/home/vlados/ias0220/build/ias0220_250620/install.log'
+[0.873s] Invoked command in '/home/vlados/ias0220/src/ias0220_250620' returned '0': PYTHONPATH=/home/vlados/ias0220/build/ias0220_250620/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ias0220_250620 build --build-base /home/vlados/ias0220/build/ias0220_250620/build install --record /home/vlados/ias0220/build/ias0220_250620/install.log --single-version-externally-managed install_data

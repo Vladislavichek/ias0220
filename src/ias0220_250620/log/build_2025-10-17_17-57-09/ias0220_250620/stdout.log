@@ -1,0 +1,58 @@
+running egg_info
+creating build/ias0220_250620/ias0220_250620.egg-info
+writing build/ias0220_250620/ias0220_250620.egg-info/PKG-INFO
+writing dependency_links to build/ias0220_250620/ias0220_250620.egg-info/dependency_links.txt
+writing entry points to build/ias0220_250620/ias0220_250620.egg-info/entry_points.txt
+writing requirements to build/ias0220_250620/ias0220_250620.egg-info/requires.txt
+writing top-level names to build/ias0220_250620/ias0220_250620.egg-info/top_level.txt
+writing manifest file 'build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+reading manifest file 'build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'build/ias0220_250620/ias0220_250620.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build
+creating /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib
+creating /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620
+copying ias0220_250620/__init__.py -> /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620
+copying ias0220_250620/odometer.py -> /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620
+copying ias0220_250620/odometry.py -> /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620
+copying ias0220_250620/test_node.py -> /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620
+copying ias0220_250620/random_walker.py -> /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620
+running install
+running install_lib
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+copying /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620/__init__.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+copying /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620/odometer.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+copying /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620/odometry.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+copying /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620/test_node.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+copying /home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/build/lib/ias0220_250620/random_walker.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620
+byte-compiling /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/odometer.py to odometer.cpython-310.pyc
+byte-compiling /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/odometry.py to odometry.cpython-310.pyc
+byte-compiling /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/test_node.py to test_node.cpython-310.pyc
+byte-compiling /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/random_walker.py to random_walker.cpython-310.pyc
+running install_data
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ament_index
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ament_index/resource_index
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ament_index/resource_index/packages
+copying resource/ias0220_250620 -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ament_index/resource_index/packages
+copying package.xml -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/launch
+copying launch/differential_robot_simu_task4_part1.launch.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/launch
+copying launch/task2.launch.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/launch
+copying launch/differential_robot_simu_task4_part2.launch.py -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/launch
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/urdf
+copying urdf/differential_robot_simu_task4_part1.urdf -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/urdf
+copying urdf/myFirst.urdf -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/urdf
+copying urdf/differential_robot.urdf -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/urdf
+creating /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/config
+copying config/Task_2-1_config.rviz -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/config
+copying config/task_4-1_config.rviz -> /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/share/ias0220_250620/config
+running install_egg_info
+Copying build/ias0220_250620/ias0220_250620.egg-info to /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620-0.0.0-py3.10.egg-info
+running install_scripts
+Installing odometer script to /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/ias0220_250620
+Installing odometry script to /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/ias0220_250620
+Installing random_walker script to /home/vlados/ias0220/src/ias0220_250620/install/ias0220_250620/lib/ias0220_250620
+writing list of installed files to '/home/vlados/ias0220/src/ias0220_250620/build/ias0220_250620/install.log'
