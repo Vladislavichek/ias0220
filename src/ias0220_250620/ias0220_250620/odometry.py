@@ -16,17 +16,14 @@ class PubOdom(Node):
             Counter, '/encoders_ticks', self.encoder_callback, 10)
 
         self.odom_pub = self.create_publisher(Odometry, "/my_odom", 10)
-        self.timer_visual = self.create_timer(1, self.timer_callback)
-
-        # self.msg = String()
+        # self.timer_visual = self.create_timer(1, self.timer_callback)
 
         self.pose = Pose()
         self.odometry_msg = Odometry()
 
-        self.fake_msg = Counter()
-        self.fake_msg.count_left = 508
-        self.fake_msg.count_right = 0
-
+        # self.fake_msg = Counter()
+        # self.fake_msg.count_left = 508
+        # self.fake_msg.count_right = 0
 
         self.pose.position.x = 0.0
         self.pose.position.y = 0.0
@@ -44,7 +41,7 @@ class PubOdom(Node):
         self.pose.position.y = 0.0
         self.pose.position.z = 0.0
 
-        # A constant time difference between vector value recipience
+        # Constant values used later in the programme
         self.dt = 1
 
         self.max_rotation = 508   # The max wheel encoder counter value
@@ -53,30 +50,29 @@ class PubOdom(Node):
 
         self.counter = 0
 
+    # # A function used to debug the encoderCallback
+    # # Generates a fake, easily changable message that is then pushed to the
+    # # callback
+    # def timer_callback(self):
+    #     F = self.fake_msg
+    #     # Simulate both wheels moving forward 10 ticks per tick
+    #     F.count_left = self.old_left_cnt + 10
+    #     F.count_right = self.old_right_cnt - 10
 
+    #     if (F.count_left > 508.8):
+    #         F.count_left -= 508
+    #     elif (F.count_left < 0):
+    #         F.count_left += 508
 
-    def timer_callback(self):
-        F = self.fake_msg
-        # Simulate both wheels moving forward 10 ticks per tick
-        F.count_left = self.old_left_cnt + 10
-        F.count_right = self.old_right_cnt - 10
+    #     if (F.count_right > 508.8):
+    #         F.count_right -= 508
+    #     elif (F.count_right < 0):
+    #         F.count_right += 508
 
-        if (F.count_left > 508.8):
-            F.count_left -= 508
-        elif (F.count_left < 0):
-            F.count_left += 508
-        
-        if (F.count_right > 508.8):
-            F.count_right -= 508
-        elif (F.count_right < 0):
-            F.count_right += 508
+    #     self.get_logger().info(f'\tMsg published: count_left -{F.count_left}'
+    #                            f' count_right - {F.count_right}')
 
-        self.get_logger().info(f'\tMsg published: count_left - {F.count_left}'
-                               f' count_right - {F.count_right}')
-
-        self.encoder_callback(self.fake_msg)
-
-
+    #     self.encoder_callback(self.fake_msg)
 
     def MakeLinear(self, delta_counter):
         if (math.fabs(delta_counter) > self.max_rotation/2):
@@ -90,63 +86,39 @@ class PubOdom(Node):
         left_rad = (delta_counter * 2 * math.pi) / self.max_rotation
         return (left_rad / self.dt) * self.wheel_r
 
-
     def encoder_callback(self, msg):
         delta_left_cnt = msg.count_left - self.old_left_cnt
         delta_right_cnt = -(msg.count_right - self.old_right_cnt)
 
-        self.get_logger().info(
-            f'The new deltas are:\nLeft: {delta_left_cnt} '
-            f'Right:{delta_right_cnt}')
-
         if delta_left_cnt == 0 and delta_right_cnt == 0:
             return
 
-
-        left_lin_speed = self.MakeLinear(delta_left_cnt)
-        right_lin_speed = self.MakeLinear(delta_right_cnt)
-
-
-        self.get_logger().info(f"Left lin: {left_lin_speed:.4f}, right lin: {right_lin_speed:.4f}")
+        left_lin_speed = float(self.MakeLinear(delta_left_cnt))
+        right_lin_speed = float(self.MakeLinear(delta_right_cnt))
 
         self.x_linear = (left_lin_speed + right_lin_speed) / 2
-        self.z_angular = float((right_lin_speed - left_lin_speed)/self.wheel_distance)
+        self.z_angular = (right_lin_speed - left_lin_speed)/self.wheel_distance
         self.delta_rot_angle = self.z_angular * self.dt
 
         self.pose.position.x += self.x_linear * math.cos(self.yaw)
         self.pose.position.y += self.x_linear * math.sin(self.yaw)
 
-        self.get_logger().info(f"Pos X: {self.pose.position.x:.2f}m, "
-                               f"Pos y: {self.pose.position.y:.2f}m")
-
         # Set the current count as the old one
         self.old_left_cnt = msg.count_left
         self.old_right_cnt = msg.count_right
 
-        # self.get_logger().info(
-        #     f'The new position of the walker is :'
-        #     f'\nx: {pos.x}\ny: {pos.y}\nz: {pos.z}')
-
         self.pub_odometry()
 
-    
-    
-
-
     def pub_odometry(self):
-        # self.get_logger().info('Publishing...')
-        # self.msg.data = "Hello"
-
-        # self.odom_pub.publish(self.msg)
         ODO = self.odometry_msg
         self.yaw += self.delta_rot_angle
-        
 
         # Transforming Euler to quaternions
         qw, qx, qy, qz = euler.euler2quat(0.0, 0.0, self.yaw)
 
-        self.get_logger().info(
-            f'The new z_angular: {self.z_angular:.4f}, x_linear - {self.x_linear:.4f}\n')
+        # self.get_logger().info(
+        #     f'The new z_angular: {self.z_angular:.4f}, '
+        #     f'x_linear - {self.x_linear:.4f}\n')
 
         ODO.header.frame_id = "odom"
         ODO.header.stamp = self.get_clock().now().to_msg()
