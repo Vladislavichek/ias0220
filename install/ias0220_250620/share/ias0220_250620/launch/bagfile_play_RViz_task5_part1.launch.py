@@ -35,12 +35,10 @@ def generate_launch_description():
         arguments=["--display-config", rvizconfig],
     )
 
-
-
     # use LaunchConfiguration to get the value of the argument
     which_bag = LaunchConfiguration('which_bag')
 
-    ## find the location of the ros2 workspace
+    # find the location of the ros2 workspace
 
     # use the 'ias0220_sensors package as reference
     pkg_in = {get_packages_with_prefixes()["ias0220_250620"]}
@@ -62,7 +60,6 @@ def generate_launch_description():
             ],
         output='screen'
         )
-
 
     return LaunchDescription(
         [

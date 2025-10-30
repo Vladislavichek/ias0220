@@ -31,7 +31,8 @@ setup(
             'random_walker = ias0220_250620.random_walker:main',
             'odometer = ias0220_250620.odometer:main',
             'odometry = ias0220_250620.odometry:main',
-            'serial_interface = ias0220_sensors.serial_interface:main'
+            'serial_interface = ias0220_sensors.serial_interface:main',
+            'steering_node = ias0220_250620.steering_node:main'
         ],
     },
 )

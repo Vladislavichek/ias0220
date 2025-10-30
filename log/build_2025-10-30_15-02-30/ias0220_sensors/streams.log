@@ -1,0 +1,21 @@
+[0.892s] Invoking command in '/home/vlados/ias0220/src/ias0220_sensors': PYTHONPATH=/home/vlados/ias0220/build/ias0220_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ias0220_sensors build --build-base /home/vlados/ias0220/build/ias0220_sensors/build install --record /home/vlados/ias0220/build/ias0220_sensors/install.log --single-version-externally-managed install_data
+[1.063s] running egg_info
+[1.063s] writing ../../build/ias0220_sensors/ias0220_sensors.egg-info/PKG-INFO
+[1.063s] writing dependency_links to ../../build/ias0220_sensors/ias0220_sensors.egg-info/dependency_links.txt
+[1.064s] writing entry points to ../../build/ias0220_sensors/ias0220_sensors.egg-info/entry_points.txt
+[1.064s] writing requirements to ../../build/ias0220_sensors/ias0220_sensors.egg-info/requires.txt
+[1.064s] writing top-level names to ../../build/ias0220_sensors/ias0220_sensors.egg-info/top_level.txt
+[1.065s] reading manifest file '../../build/ias0220_sensors/ias0220_sensors.egg-info/SOURCES.txt'
+[1.066s] writing manifest file '../../build/ias0220_sensors/ias0220_sensors.egg-info/SOURCES.txt'
+[1.066s] running build
+[1.066s] running build_py
+[1.066s] running install
+[1.066s] running install_lib
+[1.067s] running install_data
+[1.067s] running install_egg_info
+[1.068s] removing '/home/vlados/ias0220/install/ias0220_sensors/lib/python3.10/site-packages/ias0220_sensors-0.0.0-py3.10.egg-info' (and everything under it)
+[1.068s] Copying ../../build/ias0220_sensors/ias0220_sensors.egg-info to /home/vlados/ias0220/install/ias0220_sensors/lib/python3.10/site-packages/ias0220_sensors-0.0.0-py3.10.egg-info
+[1.069s] running install_scripts
+[1.084s] Installing serial_interface script to /home/vlados/ias0220/install/ias0220_sensors/lib/ias0220_sensors
+[1.085s] writing list of installed files to '/home/vlados/ias0220/build/ias0220_sensors/install.log'
+[1.107s] Invoked command in '/home/vlados/ias0220/src/ias0220_sensors' returned '0': PYTHONPATH=/home/vlados/ias0220/build/ias0220_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vlados/ias0220/install/ias0220_sensors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ias0220_sensors build --build-base /home/vlados/ias0220/build/ias0220_sensors/build install --record /home/vlados/ias0220/build/ias0220_sensors/install.log --single-version-externally-managed install_data
