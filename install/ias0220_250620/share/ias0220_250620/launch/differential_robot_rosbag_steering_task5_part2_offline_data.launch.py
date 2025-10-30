@@ -42,6 +42,7 @@ def generate_launch_description():
         output="screen"
     )
 
+<<<<<<< HEAD
     # static_transform = Node(
     #     package="tf2_ros",
     #     executable="static_transform_publisher",
@@ -65,12 +66,15 @@ def generate_launch_description():
     # )
 
     # declare the argument 'which_bag'
+=======
+>>>>>>> 0797777 (Almost completed the task 5.2. Only left to create own bag file with robot going to the light source in gazebo)
     which_bag_arg = DeclareLaunchArgument(
         'which_bag',
         default_value='bag2',
         description='Which bag to use for recording'
     )
 
+<<<<<<< HEAD
     # rvizconfig = LaunchConfiguration(
     #     "rvizconfig",
     #     default=os.path.join(
@@ -88,6 +92,8 @@ def generate_launch_description():
     #     arguments=["--display-config", rvizconfig],
     # )
 
+=======
+>>>>>>> 0797777 (Almost completed the task 5.2. Only left to create own bag file with robot going to the light source in gazebo)
     # use LaunchConfiguration to get the value of the argument
     which_bag = LaunchConfiguration('which_bag')
 

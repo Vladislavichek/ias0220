@@ -42,51 +42,11 @@ def generate_launch_description():
         output="screen"
     )
 
-    # static_transform = Node(
-    #     package="tf2_ros",
-    #     executable="static_transform_publisher",
-    #     name="map_to_odom_broadcaster",
-    #     output="screen",
-    #     arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom']
-    # )
-
-    # launch_encoders = Node(
-    #     package='encoders_pkg',
-    #     executable='encoders_node',
-    #     name='encoders_node',
-    #     output='screen',
-    # )
-
-    # odometry = Node(
-    #     package="ias0220_250620",
-    #     executable="odometry",
-    #     name="odometry",
-    #     output="screen"
-    # )
-
-    # declare the argument 'which_bag'
     which_bag_arg = DeclareLaunchArgument(
         'which_bag',
         default_value='bag2',
         description='Which bag to use for recording'
     )
-
-    # rvizconfig = LaunchConfiguration(
-    #     "rvizconfig",
-    #     default=os.path.join(
-    #         get_package_share_directory(package_name),
-    #         "config",
-    #         "task_5-1_config.rviz",
-    #     ),
-    # )
-
-    # # Define nodes
-    # rviz_node = Node(
-    #     package="rviz2",
-    #     executable="rviz2",
-    #     name="rviz",
-    #     arguments=["--display-config", rvizconfig],
-    # )
 
     # use LaunchConfiguration to get the value of the argument
     which_bag = LaunchConfiguration('which_bag')
