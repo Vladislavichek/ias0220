@@ -12,23 +12,10 @@ setup.py
 config/task_4-1_config.rviz
 config/task_5-1_config.rviz
 ias0220_250620/__init__.py
-<<<<<<< HEAD
-ias0220_250620/odometer.py
-ias0220_250620/odometry.py
-ias0220_250620/random_walker.py
-ias0220_250620/steering_node.py
-ias0220_250620/test_node.py
-launch/bagfile_play_RViz_task5_part1.launch.py
-launch/bagfile_record_task6_part1.launch.py
-launch/differential_robot_rosbag_steering_task5_part2_offline_data.launch.py
-launch/differential_robot_simu_task4_part1.launch.py
-launch/differential_robot_simu_task4_part2.launch.py
-=======
 ias0220_250620/steering_node.py
 launch/differential_robot_rosbag_steering_task5_part2_offline_data.launch.py
 launch/differential_robot_rosbag_steering_task5_part2_online_data.launch.py
 launch/to_the_light_task5_part2.launch.py
->>>>>>> 0797777 (Almost completed the task 5.2. Only left to create own bag file with robot going to the light source in gazebo)
 resource/ias0220_250620
 test/test_copyright.py
 test/test_flake8.py

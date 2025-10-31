@@ -68,8 +68,8 @@ def generate_launch_description():
 
     bag_replay = launch.actions.ExecuteProcess(
         cmd=[
-            'ros2', 'bag', 'play', '-r', '1', '-l',
-            bag_path
+            'ros2', 'bag', 'play', '-l', bag_path,
+            '--topics', 'tf', 'tf_static', 'imu', 'distance'
             ],
         output='screen'
         )
@@ -77,11 +77,6 @@ def generate_launch_description():
     return LaunchDescription(
         [
             gazebo_launch,
-            # rviz_node,
-            # odometry,
-            # static_transform,
-            # launch_encoders,
-            # rqt_node,
             which_bag_arg,
             bag_replay,
             steering_node

@@ -12,8 +12,8 @@ class Steer(Node):
 
         # A constant threshold for distance above which the sensor has to see
         # for the robot to move
-        self.high_speed_threshold = 0.2
-        self.low_speed_threshold = 0.5
+        self.high_speed_threshold = 0.04
+        self.low_speed_threshold = 0.08
         # A consant value (Hz) showing the frequency of published movement
         # messages
         self.pub_freq = 30
@@ -33,8 +33,8 @@ class Steer(Node):
         self.move_multiplier = 0
 
     def move_callback(self, msg):
-        if msg.range < self.low_speed_threshold:
-            if msg.range < self.low_speed_threshold:
+        if msg.range < self.low_speed_threshold and msg.range > 0:
+            if msg.range < self.high_speed_threshold:
                 self.move_multiplier = 2
             else:
                 self.move_multiplier = 1
@@ -49,7 +49,7 @@ class Steer(Node):
         roll, pitch, yaw = euler.quat2euler((qw, qx, qy, qz))
 
         self.twist.linear.x = pitch * self.move_multiplier
-        self.twist.angular.z = roll * 0.7 * self.move_multiplier
+        self.twist.angular.z = roll * 0.5 * self.move_multiplier
 
     def pub_velocity(self):
         self.pub_move.publish(self.twist)

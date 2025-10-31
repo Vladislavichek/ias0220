@@ -1,24 +1,4 @@
 /home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__init__.py
-<<<<<<< HEAD
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/odometer.py
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/odometry.py
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/test_node.py
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/steering_node.py
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/random_walker.py
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/__init__.cpython-310.pyc
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/odometer.cpython-310.pyc
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/odometry.cpython-310.pyc
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/test_node.cpython-310.pyc
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/steering_node.cpython-310.pyc
-/home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/random_walker.cpython-310.pyc
-/home/vlados/ias0220/install/ias0220_250620/share/ament_index/resource_index/packages/ias0220_250620
-/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/package.xml
-/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/bagfile_record_task6_part1.launch.py
-/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/differential_robot_simu_task4_part1.launch.py
-/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/bagfile_play_RViz_task5_part1.launch.py
-/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/differential_robot_rosbag_steering_task5_part2_offline_data.launch.py
-/home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/differential_robot_simu_task4_part2.launch.py
-=======
 /home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/steering_node.py
 /home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/__init__.cpython-310.pyc
 /home/vlados/ias0220/install/ias0220_250620/lib/python3.10/site-packages/ias0220_250620/__pycache__/steering_node.cpython-310.pyc
@@ -27,7 +7,6 @@
 /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/to_the_light_task5_part2.launch.py
 /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/differential_robot_rosbag_steering_task5_part2_offline_data.launch.py
 /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/launch/differential_robot_rosbag_steering_task5_part2_online_data.launch.py
->>>>>>> 0797777 (Almost completed the task 5.2. Only left to create own bag file with robot going to the light source in gazebo)
 /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/urdf/differential_robot_simu_task4_part2.urdf
 /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/urdf/myFirst.urdf
 /home/vlados/ias0220/install/ias0220_250620/share/ias0220_250620/urdf/differential_robot.urdf

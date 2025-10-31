@@ -47,7 +47,9 @@ def generate_launch_description():
         'which_bag',
 
         # You can put in the value "loops" to see an another recording, where
-        #  I tried going in the figure 8 loop with the robot
+        #  I tried going in the figure 8 loop with the robot.
+        # There is also a single recording called "bonus_demo", showcasing
+        # the robot speed controlled by the distance from the sensor
         default_value='ros_bag_to_light',
         description='Which bag to use for recording'
     )
