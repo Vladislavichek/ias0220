@@ -16,6 +16,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         (os.path.join('share', package_name, 'urdf'), glob('urdf/*.urdf')),
         (os.path.join('share', package_name, 'config'), glob('config/*.rviz')),
+        (os.path.join('share', package_name, 'data', 'images'), glob('data/images/*.png')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -32,7 +33,9 @@ setup(
             'odometer = ias0220_250620.odometer:main',
             'odometry = ias0220_250620.odometry:main',
             'serial_interface = ias0220_sensors.serial_interface:main',
-            'steering_node = ias0220_250620.steering_node:main'
+            'steering_node = ias0220_250620.steering_node:main',
+            'image_publish_node = ias0220_250620.image_publisher:main',
+            'camera_calibration = ias0220_250620.camera_calibration:main'
         ],
     },
 )

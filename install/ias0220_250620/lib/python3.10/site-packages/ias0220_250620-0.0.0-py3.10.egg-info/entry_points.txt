@@ -1,4 +1,6 @@
 [console_scripts]
+camera_calibration = ias0220_250620.camera_calibration:main
+image_publish_node = ias0220_250620.image_publisher:main
 odometer = ias0220_250620.odometer:main
 odometry = ias0220_250620.odometry:main
 random_walker = ias0220_250620.random_walker:main
