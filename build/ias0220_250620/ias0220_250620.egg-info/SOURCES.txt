@@ -9,8 +9,7 @@ setup.py
 ../../build/ias0220_250620/ias0220_250620.egg-info/requires.txt
 ../../build/ias0220_250620/ias0220_250620.egg-info/top_level.txt
 ../../build/ias0220_250620/ias0220_250620.egg-info/zip-safe
-config/task_4-1_config.rviz
-config/task_5-1_config.rviz
+config/task6_part1_250620.rviz
 data/images/img_0001.png
 data/images/img_0002.png
 data/images/img_0003.png
@@ -51,10 +50,10 @@ data/images/img_0037.png
 ias0220_250620/__init__.py
 ias0220_250620/camera_calibration.py
 ias0220_250620/image_publisher.py
-ias0220_250620/steering_node.py
 launch/differential_robot_rosbag_steering_task5_part2_offline_data.launch.py
 launch/differential_robot_rosbag_steering_task5_part2_online_data.launch.py
 launch/task6_part1_250620.launch.py
+launch/task6_part2_250620.launch.py
 launch/to_the_light_task5_part2.launch.py
 resource/ias0220_250620
 test/test_copyright.py

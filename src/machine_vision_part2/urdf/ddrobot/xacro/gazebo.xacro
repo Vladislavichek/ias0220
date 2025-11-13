@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="robot_dynamics" params="mu1 mu2">
+        <mu1 value="${mu1}" />
+        <mu2 value="${mu2}" />
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+    </xacro:macro>
+
+    <!-- Reference to robot links -->
+    <gazebo reference="chasis">
+        <material>Gazebo/Red</material>
+    </gazebo>
+    <gazebo reference="head1">
+        <material>Gazebo/Red</material>
+    </gazebo>
+    <gazebo reference="head_mount">
+        <material>Gazebo/Red</material>
+    </gazebo>
+    <gazebo reference="right_front_wheel">
+        <xacro:robot_dynamics mu1="10.0" mu2="10.0" />
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="right_back_wheel">
+        <xacro:robot_dynamics mu1="10.0" mu2="10.0" />
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="left_front_wheel">
+        <xacro:robot_dynamics mu1="10.0" mu2="10.0" />
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="left_back_wheel">
+        <xacro:robot_dynamics mu1="10.0" mu2="10.0" />
+        <material>Gazebo/Black</material>
+    </gazebo>
+        <gazebo reference="passive_wheel_holder1">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="passive_wheel1">
+        <mu1 value="0.0"/>
+        <mu2 value="0.0"/>
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo>
+        <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+    
+    
+            <!-- Wheel Information -->
+
+            <left_joint>joint_left_back_wheel</left_joint>
+
+            <right_joint>joint_right_back_wheel</right_joint>       
+
+            <wheel_separation>0.9</wheel_separation>
+            <wheel_diameter>0.4</wheel_diameter>
+    
+
+            <!-- Limits -->
+            <max_wheel_torque>20</max_wheel_torque>
+            <max_wheel_acceleration>10.0</max_wheel_acceleration>
+    
+
+            <!-- Output -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint1</robot_base_frame>
+
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+    
+    
+        </plugin>
+    </gazebo>
+
+
+</robot>

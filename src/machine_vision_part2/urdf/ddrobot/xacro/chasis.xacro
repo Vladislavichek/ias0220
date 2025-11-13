@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="head_mass" value="0.1" />
+    <xacro:property name="head_radius" value="0.25" />
+    <xacro:property name="head_inertia_calc" value="${(2/5) * head_mass * (head_radius * head_radius)}" />
+
+    <xacro:property name="head_mount_mass" value="0.1" />
+    <xacro:property name="head_mount_radius" value="0.1" />
+    <xacro:property name="head_mount_height" value="0.5" />
+    <xacro:property name="head_mount_inertia_calc" value="${(1/12) * head_mount_mass * ((3 * (head_mount_radius * head_mount_radius)) + (head_mount_height * head_mount_height))}" />
+    <xacro:property name="head_mount_inertia_calc_izz" value="${(1/2) * head_mount_mass * (head_mount_radius * head_mount_radius)}" />
+
+    <xacro:property name="chasis_mass" value="0.2" />
+    <xacro:property name="chasis_width" value="0.8" />
+    <xacro:property name="chasis_height" value="0.25" />
+    <xacro:property name="chasis_length" value="1" />
+    
+    <xacro:property name="chasis_inertia_calc_ixx" value="${(1/12) * chasis_mass * ((chasis_height * chasis_height) + (chasis_length * chasis_length))}" />
+    <xacro:property name="chasis_inertia_calc_iyy" value="${(1/12) * chasis_mass * ((chasis_width * chasis_width) + (chasis_height * chasis_height))}" />
+    <xacro:property name="chasis_inertia_calc_izz" value="${(1/12) * chasis_mass * ((chasis_width * chasis_width) + (chasis_length * chasis_length))}" />
+
+    <xacro:macro name="chasis">
+
+        <!-- Robot Head -->
+        <link name="head1">
+            <visual>
+                <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+                <geometry>
+                    <sphere radius="${head_radius}" />
+                </geometry>
+                <material name="red" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+                <geometry>
+                    <sphere radius="${head_radius}" />
+                </geometry> 
+            </collision>
+            <inertial>
+                <mass value="${chasis_mass}"/>
+                <inertia ixx="${head_inertia_calc}" ixy="0.0" ixz="0.0" iyy="${head_inertia_calc}" iyz="0.0" izz="${head_inertia_calc}"/>
+            </inertial> 
+        </link>
+        <joint name="joint_head_mount__head" type="fixed">
+            <origin xyz="0 0 0.4" rpy="0.0 0.0 0.0" />
+            <parent link="head_mount"/>
+            <child link="head1"/>
+        </joint> 
+
+        <!-- Robot Head Mount -->
+        <link name="head_mount">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius="${head_mount_radius}" length="${head_mount_height}"/>
+                </geometry>
+                <material name="red"/>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius="${head_mount_radius}" length="${head_mount_height}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="${head_mount_mass}"/>
+                <inertia ixx="${head_mount_inertia_calc}" ixy="0.0" ixz="0.0" iyy="${head_mount_inertia_calc}" iyz="0.0" izz="${head_mount_inertia_calc_izz}"/>
+            </inertial>  
+        </link>
+        <joint name="joint_chasis__head_mount" type="fixed">
+            <origin xyz="0 0 0.23" rpy="0.0 0.0 0.0" />
+            <parent link="chasis"/>
+            <child link="head_mount"/>
+        </joint> 
+
+        <!-- Main Robot Body  -->
+        <link name="chasis">
+            <visual>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+                <geometry>
+                    <box size="${chasis_length} ${chasis_width} ${chasis_height}" />
+                </geometry>
+                <material name="red" />
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+                <geometry>
+                    <box size="${chasis_length} ${chasis_width} ${chasis_height}" />
+                </geometry> 
+            </collision>
+            <inertial>
+                <mass value="${chasis_mass}"/>
+                <inertia ixx="${chasis_inertia_calc_ixx}" ixy="0.0" ixz="0.0" iyy="${chasis_inertia_calc_iyy}" iyz="0.0" izz="${chasis_inertia_calc_izz}"/>
+            </inertial>          
+        </link> 
+        <joint name="joint_base_footprint__chasis" type="fixed">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <parent link="base_footprint1"/>
+            <child link="chasis"/>
+        </joint>
+    </xacro:macro>
+
+</robot>

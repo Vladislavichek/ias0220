@@ -37,6 +37,9 @@
     <xacro:property name = "PASSIVE_WHEEL_XX_YY_ZZ_INERTIA" value = "${(2/5)*PASSIVE_WHEEL_MASS*(SUPPORT_WIDTH/2)**2}"/>
 
 
+    <xacro:property name="CAMERA_SIDE_SIZE" value="0.05" /> <!-- Size of square 'camera' box -->
+
+
 
     <!-- 
     Parameters:
@@ -200,6 +203,30 @@
         </material>
     </gazebo>
 
+    <!-- Camera -->
+    <link name="camera_link">
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="${CAMERA_SIDE_SIZE} ${CAMERA_SIDE_SIZE} ${CAMERA_SIDE_SIZE}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="${CAMERA_SIDE_SIZE} ${CAMERA_SIDE_SIZE} ${CAMERA_SIDE_SIZE}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+
+        <!-- <inertial>
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial> -->
+    </link>
+
 
     <link name="passive_wheel_holder">
         <visual>
@@ -286,6 +313,14 @@
         <axis xyz="0.0 0.0 0.0"/>
     </joint>
 
+    <joint name="camera_joint" type="fixed">
+        <axis xyz="0 1 0" />
+        <origin xyz="0 0 ${HEAD_SIDE_SIZE/2 + CAMERA_SIDE_SIZE/2}" 
+            rpy="0 0 0"/>
+        <parent link="head_link"/>
+        <child link="camera_link"/>
+    </joint>
+
     <joint name="base_link_to_footprint" type="fixed">
         <origin xyz="0.0 0.0 0.03" rpy="0.0 0.0 0.0"/>
         <parent link="base_footprint"/>
@@ -312,6 +347,7 @@
         <plugin name="diff_rob" filename="libgazebo_ros_diff_drive.so">
             <ros>
                 <remapping>odom:=diff_cont/odom</remapping>
+                <namespace>detector_robot</namespace>
             </ros>
             <update_rate>30</update_rate>
 

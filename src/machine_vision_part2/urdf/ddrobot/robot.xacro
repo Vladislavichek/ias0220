@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ddrobot">
+
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/chasis.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/wheels.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/gazebo.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/materials.xacro"/>
+
+    <xacro:property name="passive_wheel_holder_radius" value="0.01" />
+    <xacro:property name="passive_wheel_holder_length" value="0.18" />
+    <xacro:property name="passive_wheel_holder_z_offset" value="-0.1" />
+    
+    <!-- Robot Base Footprint -->
+    <link name="base_footprint1"></link>
+
+    <!-- Robot Chasis -->
+    <xacro:chasis />
+
+    <!-- Robot Wheels -->
+    
+    <joint name="base_to_passive_wheel_holder1" type="fixed">
+        <origin xyz="0.065 0 0" rpy="0 0 0" />
+        <parent link="chasis"/>
+        <child link="passive_wheel_holder1"/>
+    </joint>
+
+    <link name="passive_wheel_holder1">
+        <visual>
+            <origin xyz="0.4 0 ${passive_wheel_holder_z_offset}" />
+            <geometry>
+                <cylinder radius="${passive_wheel_holder_radius}" length="${passive_wheel_holder_length}" />
+            </geometry>
+            <material name="white"></material>
+        </visual>
+        <collision>
+            <origin xyz="0.4 0 ${passive_wheel_holder_z_offset}" />
+            <geometry>
+                <cylinder radius="${passive_wheel_holder_radius}" length="${passive_wheel_holder_length}" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.02"/>
+            <origin xyz="0.4 0 ${passive_wheel_holder_z_offset}" />
+            <inertia ixx="0.00000104" ixy="0.0" ixz="0.0" iyy="0.00000104" iyz="0.0" izz="0.000001"/>
+        </inertial>
+    </link>
+
+
+    <!-- Passive Wheel Link and Joint with Passive Wheel Holder Link -->
+    <joint name="base_to_passive_wheel1" type="fixed">
+        <origin xyz="0.4 0 -0.195" rpy="0 0 0" />
+        <parent link="passive_wheel_holder1"/>
+        <child link="passive_wheel1"/>
+    </joint>
+
+    <link name="passive_wheel1">
+        <visual>
+            <geometry>
+                <sphere radius="${passive_wheel_holder_radius}" />
+            </geometry>
+            <material name="white"></material>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${passive_wheel_holder_radius}" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.02"/>
+            <inertia ixx="0.0000008" ixy="0.0" ixz="0.0" iyy="0.0000008" iyz="0.0" izz="0.0000008"/>
+        </inertial>
+    </link>
+    
+    
+    <xacro:wheel side="right" position="back" offset_x="${-(chasis_length/2 - 0.1)}" offset_y="${-(chasis_width/2 + 0.05)}" />
+    <xacro:wheel side="left" position="back" offset_x="${-(chasis_length/2 - 0.1)}" offset_y="${chasis_width/2 + 0.05}" />
+</robot>
