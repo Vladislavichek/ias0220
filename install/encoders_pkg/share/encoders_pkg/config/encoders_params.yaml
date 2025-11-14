@@ -1,3 +1,0 @@
-encoders_node:
-    ros__parameters:
-        noisy: true

@@ -1,6 +1,0 @@
-source;share/setup_gazebo_ias0220/hook/pythonpath.ps1
-source;share/setup_gazebo_ias0220/hook/pythonpath.dsv
-source;share/setup_gazebo_ias0220/hook/pythonpath.sh
-source;share/setup_gazebo_ias0220/hook/ament_prefix_path.ps1
-source;share/setup_gazebo_ias0220/hook/ament_prefix_path.dsv
-source;share/setup_gazebo_ias0220/hook/ament_prefix_path.sh

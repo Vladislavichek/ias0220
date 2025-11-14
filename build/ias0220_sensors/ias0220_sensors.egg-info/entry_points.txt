@@ -1,3 +1,0 @@
-[console_scripts]
-serial_interface = ias0220_sensors.serial_interface:main
-

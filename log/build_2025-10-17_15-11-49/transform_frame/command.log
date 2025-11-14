@@ -1,6 +1,0 @@
-Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/transform_frame -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/transform_frame
-Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vlados/ias0220/src/transform_frame -DCMAKE_INSTALL_PREFIX=/home/vlados/ias0220/install/transform_frame
-Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/transform_frame -- -j16 -l16
-Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vlados/ias0220/build/transform_frame -- -j16 -l16
-Invoking command in '/home/vlados/ias0220/build/transform_frame': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/transform_frame
-Invoked command in '/home/vlados/ias0220/build/transform_frame' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vlados/ias0220/build/transform_frame
