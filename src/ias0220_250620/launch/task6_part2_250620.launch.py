@@ -2,9 +2,9 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
-from launch.substitutions import LaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
+from launch.substitutions import LaunchConfiguration
 import xacro
 
 package_name = "ias0220_250620"
@@ -48,10 +48,36 @@ def generate_launch_description():
                    "-x", "0.6", "-y", "-7.5", "-z", "0.0", "-Y", "1.6"]
     )
 
+    object_recognition = Node(
+        package='ias0220_250620',
+        executable='object_recognition',
+        name='object_recognition',
+        output='screen',
+    )
+
+    rvizconfig = LaunchConfiguration(
+        "rvizconfig",
+        default=os.path.join(
+            get_package_share_directory(package_name),
+            "config",
+            "task6_part2_250620.rviz",
+        ),
+    )
+
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        output="screen",
+        arguments=["--display-config", rvizconfig],
+    )
+
     return LaunchDescription(
         [
             robot_state_pub_node,
             spawn_robot,
-            machine_vision_launch
+            machine_vision_launch,
+            object_recognition,
+            rviz_node
         ]
     )

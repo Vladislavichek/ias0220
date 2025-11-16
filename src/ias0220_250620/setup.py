@@ -35,7 +35,8 @@ setup(
             'serial_interface = ias0220_sensors.serial_interface:main',
             'steering_node = ias0220_250620.steering_node:main',
             'image_publish_node = ias0220_250620.image_publisher:main',
-            'camera_calibration = ias0220_250620.camera_calibration:main'
+            'camera_calibration = ias0220_250620.camera_calibration:main',
+            'object_recognition = ias0220_250620.object_recognition:main'
         ],
     },
 )
