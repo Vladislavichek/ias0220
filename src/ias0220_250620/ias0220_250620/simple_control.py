@@ -15,7 +15,8 @@ import math
 import rclpy
 import time
 from rclpy.node import Node
-from rclpy.time import Duration, Time
+from rclpy.time import Time
+from tf2_ros import Buffer, TransformListener
 import numpy as np
 from geometry_msgs.msg import Twist, PoseStamped, Point
 from visualization_msgs.msg import Marker
@@ -27,6 +28,9 @@ class PDController(Node):
     def __init__(self):
         # Your code here
         super().__init__('controller')
+
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
 
         # Wait for run other nodes
         time.sleep(5)
@@ -44,12 +48,16 @@ class PDController(Node):
             Twist, '/detector_robot/cmd_vel', 10)
         self.pub_viz = self.create_publisher(Marker, "waypoints", 10)
 
-        self.marker_frame = "odom"
+        # self.create_timer(1, self.debugPrint)
+
+        self.marker_frame = "map"
 
         self.dt = 0.01
 
         self.vel_cmd_msg = Twist()
-        self.vel_cmd = np.array([0.0, 0.0])  # [linear_velocity, angular_velocity]
+
+        # [linear_velocity, angular_velocity]
+        self.vel_cmd = np.array([0.0, 0.0])
 
         self.pos = np.array([0.0, 0.0])     # Current position [x, y]
         self.pos_diff = 0.0                 # Distance to the current waypoint
@@ -60,7 +68,8 @@ class PDController(Node):
 
         self.error = np.array([0.0, 0.0])   # [dx, dy] to current waypoint
 
-        self.error_change_rate_norm = 0.0   # Norm of error change for derivative term
+        # Norm of error change for derivative term
+        self.error_change_rate_norm = 0.0
 
         self.prev_error = np.array([0.0, 0.0])
         # self.prev_pos_diff = 0.0
@@ -100,10 +109,39 @@ class PDController(Node):
         self.get_logger().info(f'Start Time: {self.start_time}')
 
 
+    # def debugPrint(self):
+    #     self.get_logger().info(f'Angular: th_diff - {self.th_diff}  ')
+    #     self.get_logger().info(f'theta_change_rat - {self.theta_change_rate}')
+    #     self.get_logger().info(f'Linear: pos_diff - {self.pos_diff}   ')
+    #     self.get_logger().info(f'error_change_rate - {self.error_change_rate_norm}')
+
     def onGoal(self, msg):
         new_wp = np.array([[msg.pose.position.x, msg.pose.position.y]])
         self.waypoints = np.vstack([self.waypoints, new_wp])
 
+
+    def update_pose_from_tf(self):
+        try:
+            transform = self.tf_buffer.lookup_transform(
+                'map',        # target frame
+                'base_link',  # source frame
+                rclpy.time.Time()
+            )
+
+            # Position
+            self.pos[0] = transform.transform.translation.x
+            self.pos[1] = transform.transform.translation.y
+
+            # Orientation
+            q = transform.transform.rotation
+            (roll, pitch, yaw) = euler_from_quaternion([q.x, q.y, q.z, q.w])
+            self.theta = yaw
+
+            return True
+
+        except Exception as e:
+            self.get_logger().warn(f"TF lookup failed: {e}")
+            return False
 
 
     def wrapAngle(self, angle):
@@ -130,8 +168,11 @@ class PDController(Node):
         ang_vel = self.Kp[0]*self.th_diff + self.Kd[0]*self.theta_change_rate
         lin_vel = self.Kp[1]*self.pos_diff + self.Kd[1]*self.error_change_rate_norm
 
-        if abs(self.th_diff) > 0.2:  # large angle?
-            ang_vel *= 2
+
+        # self.get_logger().info(f'')
+
+        if abs(self.th_diff) > 0.25:  # large angle?
+            ang_vel *= 3
             lin_vel = 0.01
 
         self.vel_cmd = (lin_vel, ang_vel)
@@ -199,7 +240,6 @@ class PDController(Node):
         self.prev_error = self.error.copy()
 
 
-
     def isWaypointReached(self):
         """
         check if a waypoint is reached. The user defines the threshold during 
@@ -225,12 +265,8 @@ class PDController(Node):
         @result: update of relevant vehicle state variables
         """
 
-        self.pos[0] = odom_msg.pose.pose.position.x
-        self.pos[1] = odom_msg.pose.pose.position.y
-
-        orientation_q = odom_msg.pose.pose.orientation
-        orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
-        self.theta = euler_from_quaternion(orientation_list)[2]
+        if not self.update_pose_from_tf():
+            return
 
         now_odom_time = rclpy.time.Time.from_msg(odom_msg.header.stamp)
 
@@ -272,32 +308,3 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
-
-# comments: Really lacking the comments for the code. Particularly to add:
-# what are all the waypoints variable mess for (to set the points for the robot
-# to pass. The coder shouldn't touch them <- add this)
-#
-# Calculate error -> "Calculate lateral error to first waypoint and heading 
-# error between line to waypoint and robot heading."
-# The sentence is absolutely unclear. It seems as though I need to simultaneously
-# calculate the waypoint and heading, but the heading is undefined. And keeping
-# in mind such long arrays of thought is difficult. Don't use your definiton 
-# "heading error between line to waypoint and robot heading". There is no 
-# heading, there is a heading direction. If you can't remember english words 
-# for your long complicated definitons, please use the short ones, like 
-# "an angle", or if you will "THE angle"
-# Make it clear that I need to find "the lateral error to THE first waypoint 
-# (please consider using the proper grammar, it makes understanding 1000% more 
-# understandable) and the angle error. The angle error - the difference between
-# where the robot was originally headed versus where it should be headed"
-#
-# Please also check your punctuation
-#
-# If it is difficult for you to make proper comments due to the language barrier,
-# check your clearance using chatgpt or ask someone else if they understand what
-# you've written. If they need to clarify, add more information to your comments
-#
-# Elaborate more on the meaning of the variables - what they are for
-#
-# If even that is too difficult for you, I have made most of the comments proper
-# in my code. You can copy it and use it as the future template.

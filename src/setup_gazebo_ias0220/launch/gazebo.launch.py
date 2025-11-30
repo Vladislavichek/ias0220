@@ -35,7 +35,6 @@ def spawn_and_publish(context, xacro_file: LaunchConfiguration):
                     }])
     publish_state_action.execute(context)
 
-
 def generate_launch_description():
     # Define launch arguments
     paused = LaunchConfiguration('paused', default='false')
@@ -43,27 +42,23 @@ def generate_launch_description():
     gui = LaunchConfiguration('gui', default='true')
     headless = LaunchConfiguration('headless', default='false')
     debug = LaunchConfiguration('debug', default='false')
-    world_path = os.path.join(get_package_share_directory('setup_gazebo_ias0220'), 'worlds', "seethelight.world")
+    world_path = os.path.join(get_package_share_directory('setup_gazebo_ias0220'), 'worlds', "room_with_shapes.world")
 
     world = LaunchConfiguration('world')
-
     # Declare launch arguments
-    declare_xacro_file_arg = DeclareLaunchArgument('xacro_file',
-                                                   description='xacro file for gazebo launch file')
+    declare_xacro_file_arg = DeclareLaunchArgument('xacro_file', description = 'xacro file for gazebo launch file')
     declare_world_cmd = DeclareLaunchArgument(
         name='world',
         default_value=world_path,
         description='Full path to the world model file to load')
-
+    
     return LaunchDescription([
         declare_xacro_file_arg,
         declare_world_cmd,
 
         # Specify launch files
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                [get_package_share_directory('gazebo_ros'),
-                    '/launch/gazebo.launch.py']),
+            PythonLaunchDescriptionSource([get_package_share_directory('gazebo_ros'), '/launch/gazebo.launch.py']),
             launch_arguments={
                 'debug': debug,
                 'gui': gui,
@@ -76,5 +71,5 @@ def generate_launch_description():
 
         # Define an OpaqueFunction action to spawn and publish
         OpaqueFunction(function=spawn_and_publish, args=[LaunchConfiguration('xacro_file')])
-
+        
     ])

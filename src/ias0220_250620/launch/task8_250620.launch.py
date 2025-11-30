@@ -69,19 +69,34 @@ def generate_launch_description():
         }.items(),
     )
 
-    static_transform = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="map_to_odom_broadcaster",
-        output="screen",
-        arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom']
+    slam_node = Node(
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',  # or 'sync_slam_toolbox_node'
+        name='slam_toolbox',
+        output='screen',
+        parameters=[{
+            'use_sim_time': True,          # important for simulation
+            'scan_topic': '/scan',         # your laser topic
+            'base_frame': 'base_link',
+            'odom_frame': 'odom',
+            'map_frame': 'map'
+        }]
     )
+
+    # static_transform = Node(
+    #     package="tf2_ros",
+    #     executable="static_transform_publisher",
+    #     name="map_to_odom_broadcaster",
+    #     output="screen",
+    #     arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom']
+    # )
 
     return LaunchDescription(
         [
             control_node,
             gazebo_launch,
             rviz_node,
-            static_transform
+            slam_node,
+            # static_transform
         ]
     )

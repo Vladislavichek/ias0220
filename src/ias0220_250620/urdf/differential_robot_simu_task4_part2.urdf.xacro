@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+
+<robot name="The_IAS_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="macros.xacro"/>
+
+
+    <material name="red">
+        <color rgba="0.9 0.1 0.1 1.0"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.1 0.1 0.9 1.0"/>
+    </material>
+
+    <material name = "white">
+        <color rgba="1 1 1 1.0"/>
+    </material>
+
+
+
+
+    <link name="base_footprint"/>
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${BASE_RADIUS}" length="${BASE_HEIGHT}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${BASE_RADIUS}" length="${BASE_HEIGHT}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="${BASE_MASS}"/>
+            <inertia ixx="${BASE_XX_YY_INERTIA}" ixy="0.0" ixz="0.0" iyy="${BASE_XX_YY_INERTIA}" iyz="0.0" izz="${BASE_ZZ_INERTIA}"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="base_link">
+        <material>
+            Gazebo/Red
+        </material>
+    </gazebo>
+
+
+    <link name="head_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE}"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE} ${HEAD_SIDE_SIZE}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="${HEAD_MASS}"/>
+            <inertia ixx="${HEAD_XX_YY_ZZ_INERTIA}" ixy="0.0" ixz="0.0" iyy="${HEAD_XX_YY_ZZ_INERTIA}" iyz="0.0" izz="${HEAD_XX_YY_ZZ_INERTIA}"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="head_link">
+        <material>
+            Gazebo/Blue
+        </material>
+    </gazebo>
+
+
+
+    <link name="rod_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${ROD_RADIUS}" length="${ROD_HEIGHT}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${ROD_RADIUS}" length="${ROD_HEIGHT}"/>
+            </geometry>
+        </collision>
+    </link>
+
+
+
+    <!-- Hokuyo Laser -->
+    <link name="hokuyo_link">
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="${LASER_RADIUS}" length="${LASER_HEIGHT}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="${LASER_RADIUS}" length="${LASER_HEIGHT}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+
+        <!-- <inertial>
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial> -->
+    </link>
+
+    <!-- hokuyo -->
+    <gazebo reference="hokuyo_link">
+        <sensor type="ray" name="head_hokuyo_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>true</visualize>
+        <update_rate>40</update_rate>
+        <ray>
+            <scan>
+            <horizontal>
+                <samples>720</samples>
+                <resolution>1</resolution>
+                <min_angle>-1.570796</min_angle>
+                <max_angle>1.570796</max_angle>
+            </horizontal>
+            </scan>
+            <range>
+            <min>0.10</min>
+            <max>30.0</max>
+            <resolution>0.01</resolution>
+            </range>
+            <noise>
+            <type>gaussian</type>
+            <!-- Noise parameters based on published spec for Hokuyo laser
+                achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+                stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+                reading. -->
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+            </noise>
+        </ray>
+        <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+                <remapping>~/out:=scan</remapping>
+            </ros>
+            <output_type>sensor_msgs/LaserScan</output_type>
+            <!-- <topicName>/laser/scan</topicName> -->
+            <frameName>hokuyo_link</frameName>
+        </plugin>
+        </sensor>
+    </gazebo>
+
+    <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_ray_sensor.so">
+    <ros>
+    <remapping>~/out:=scan</remapping>
+    </ros>
+    <output_type>sensor_msgs/LaserScan</output_type>
+    <frame_name>""your laser link, whatever you named it"</frame_name>
+    </plugin>
+
+
+    <link name="passive_wheel_holder">
+        <visual>
+            <geometry>
+                <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${SUPPORT_WIDTH} ${SUPPORT_WIDTH} ${WHEEL_HOLDER_HEIGHT}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="${WHEEL_HOLDER_MASS}"/>
+            <inertia ixx="${WHEEL_HOLDER_XX_INERTIA}" ixy="0.0" ixz="0.0" iyy="${WHEEL_HOLDER_YY_INERTIA}" iyz="0.0" izz="${WHEEL_HOLDER_ZZ_INERTIA}"/>
+        </inertial>
+    </link>
+
+    <link name="passive_wheel">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="${SUPPORT_WIDTH/2}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="${SUPPORT_WIDTH/2}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="${PASSIVE_WHEEL_MASS}"/>
+            <inertia ixx="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}" ixy="0.0" ixz="0.0" iyy="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}" iyz="0.0" izz="${PASSIVE_WHEEL_XX_YY_ZZ_INERTIA}"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="passive_wheel">
+        <mu1>0.0</mu1>
+        <mu2>0.0</mu2>
+        <kp>100000.0</kp>
+        <kd>0.5</kd>
+    </gazebo>
+
+    
+
+    <xacro:wheel_link prefix = "left"/>
+    <xacro:wheel_link prefix = "right"/>
+
+    <xacro:rotation_marker_link prefix = "right"/>
+    <xacro:rotation_marker_link prefix = "left"/>
+
+
+
+
+    <xacro:wheel_joint prefix = "right" direction = "-1"/>
+    <xacro:wheel_joint prefix = "left" direction = "1"/>
+
+    <xacro:wheel_to_rotation_marker prefix = "right" side = "1"/>
+    <xacro:wheel_to_rotation_marker prefix = "left" side = "-1"/>
+
+    <joint name="passive_wheel_holder_to_wheel" type="fixed">
+        <origin xyz="0.0 0.0 ${-WHEEL_HOLDER_HEIGHT/2}" rpy="0.0 0.0 0.0"/>
+        <parent link="passive_wheel_holder"/>
+        <child link="passive_wheel"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="head_to_support_base" type="fixed">
+        <!-- xyz wrong since the distance is from the center of the head
+             to the center of the support base -->
+        <origin xyz="0.0 0.0 ${-(BASE_HEIGHT + HEAD_SIDE_SIZE/2 + WHEEL_HOLDER_HEIGHT/2)}"/> 
+        <parent link="head_link"/>
+        <child link="passive_wheel_holder"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="base_link_to_head" type="fixed">
+        <origin xyz="${BASE_RADIUS - HEAD_SIDE_SIZE/2} 0.0 ${BASE_HEIGHT/2 + HEAD_SIDE_SIZE/2}"/>
+        <parent link="base_link"/>
+        <child link="head_link"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="base_link_to_rod" type="fixed">
+        <origin xyz="0.0 0.0 ${BASE_HEIGHT/2 + ROD_HEIGHT/2}"/>
+        <parent link="base_link"/>
+        <child link="rod_link"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint> 
+
+    <joint name="hokuyo_joint" type="fixed">
+        <axis xyz="0 1 0" />
+        <origin xyz="0 0 ${LASER_HEIGHT/2 + ROD_HEIGHT/2}" rpy="0 0 0"/>
+        <parent link="rod_link"/>
+        <child link="hokuyo_link"/>
+    </joint>
+
+
+    <joint name="base_link_to_footprint" type="fixed">
+        <origin xyz="0.0 0.0 0.03" rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+
+
+    <gazebo>
+        <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <ros>
+            <remapping>odom:=ground_truth</remapping>
+        </ros>
+        <update_rate>50.0</update_rate>
+        <body_name>base_footprint</body_name>
+        <gaussian_noise>0.0</gaussian_noise>
+        <frame_name>map</frame_name>
+        <xyz_offset>0 0 0</xyz_offset>
+        <rpy_offset>0 0 0</rpy_offset>
+        </plugin> 
+    </gazebo>
+
+
+    <gazebo>
+        <plugin name="diff_rob" filename="libgazebo_ros_diff_drive.so">
+            <ros>
+                <remapping>odom:=diff_cont/odom</remapping>
+                <namespace>detector_robot</namespace>
+            </ros>
+            <update_rate>30</update_rate>
+
+            <!-- wheels -->
+            <left_joint>base_to_left_wheel</left_joint>
+            <right_joint>base_to_right_wheel</right_joint>
+
+            <!-- kinematics -->
+            <wheel_separation>0.28</wheel_separation>
+            <wheel_diameter>0.06</wheel_diameter>
+
+            <!-- limits -->
+            <max_wheel_torque>20</max_wheel_torque>
+            <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+            
+            <!-- output -->
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+
+            <command_topic>cmd_vel</command_topic>
+            <odometry_topic>odom</odometry_topic>
+            <odometry_source>0</odometry_source>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
+        </plugin>
+    </gazebo>
+
+    
+</robot>

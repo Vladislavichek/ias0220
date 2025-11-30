@@ -1,0 +1,4 @@
+# joint_broad:  # We can leave this file commented out as all parameters of JointStateBroadcaster are optional
+#   ros__parameters:
+#     joints: ['base_to_left_wheel', 'base_to_right_wheel']
+#     interfaces: ['position', 'velocity']
