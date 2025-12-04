@@ -15,10 +15,13 @@ def generate_launch_description():
 
     # Parse the urdf with xacro
     xacro_file = os.path.join(package_path, "urdf",
-                              "differential_robot_simu_task4_part2.urdf.xacro")
+                              "differential_robot_simu_task8.urdf.xacro")
 
     doc = xacro.process_file(xacro_file)
     robot_description = doc.toxml()
+
+    map_file = os.path.join(package_path, "map", "room.yaml")
+    nav2_yaml = os.path.join(package_path, "map", "nav2_params.yaml")
 
     config = os.path.join(
         package_path,
@@ -52,7 +55,8 @@ def generate_launch_description():
         executable='rviz2',
         name='rviz2',
         output="screen",
-        parameters=[{"robot_description": robot_description}],
+        parameters=[{"robot_description": robot_description},
+                    {'use_sim_time': True}],
         arguments=["--display-config", rvizconfig],
     )
 
@@ -69,34 +73,49 @@ def generate_launch_description():
         }.items(),
     )
 
-    slam_node = Node(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',  # or 'sync_slam_toolbox_node'
-        name='slam_toolbox',
-        output='screen',
-        parameters=[{
-            'use_sim_time': True,          # important for simulation
-            'scan_topic': '/scan',         # your laser topic
-            'base_frame': 'base_link',
-            'odom_frame': 'odom',
-            'map_frame': 'map'
-        }]
+    map_server = Node(
+        package="nav2_map_server",
+        executable="map_server",
+        name="map_server",
+        output="screen",
+        parameters=[{'use_sim_time': True},
+                    {"yaml_filename": map_file}]
     )
 
-    # static_transform = Node(
-    #     package="tf2_ros",
-    #     executable="static_transform_publisher",
-    #     name="map_to_odom_broadcaster",
-    #     output="screen",
-    #     arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom']
-    # )
+    amcl_node = Node(
+        package='nav2_amcl',
+        executable='amcl',
+        name='amcl',
+        output='screen',
+        parameters=[nav2_yaml]
+    )
+
+    lifecycle_manager = Node(
+        package='nav2_lifecycle_manager',
+        executable='lifecycle_manager',
+        name='lifecycle_manager_localization',
+        output='screen',
+        parameters=[{'use_sim_time': True},
+                    {'autostart': True},
+                    {'node_names': ['map_server', 'amcl']}]
+    )
+
+    static_transform = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="map_to_odom_broadcaster",
+        output="screen",
+        arguments=['0', '0', '0', '0', '0', '0', 'odom', 'map']
+    )
 
     return LaunchDescription(
         [
             control_node,
             gazebo_launch,
             rviz_node,
-            slam_node,
-            # static_transform
+            static_transform,
+            map_server,
+            amcl_node,
+            lifecycle_manager
         ]
     )
