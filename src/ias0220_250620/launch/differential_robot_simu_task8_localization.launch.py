@@ -2,6 +2,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
+from launch.actions import TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
@@ -29,24 +30,12 @@ def generate_launch_description():
         'simple_control_v2.yaml'
     )
 
-    control_node = Node(
-        package="ias0220_250620",
-        executable="control_node",
-        name="controller",
-        output="screen",
-        parameters=[config],
-        # remappings=[
-        #     ('/cmd_vel', '/detector_robot/cmd_vel'),
-        #     # ('/diff_cont/odom', '/detector_robot/diff_cont/odom')
-        # ]
-    )
-
     rvizconfig = LaunchConfiguration(
         "rvizconfig",
         default=os.path.join(
             get_package_share_directory(package_name),
             "config",
-            "differential_robot_rviz_task8.rviz",
+            "differential_robot_rviz_task8-2.rviz",
         ),
     )
 
@@ -60,62 +49,70 @@ def generate_launch_description():
         arguments=["--display-config", rvizconfig],
     )
 
-    gazebo_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(
-                get_package_share_directory("setup_gazebo_ias0220"),
-                "launch",
-                "gazebo.launch.py"
-            )
-        ),
-        launch_arguments={
-            "xacro_file": xacro_file
-        }.items(),
-    )
+    delayedNodes = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package="ias0220_250620",
+                executable="control_node",
+                name="controller",
+                output="screen",
+                parameters=[config],
+            ),
 
-    map_server = Node(
-        package="nav2_map_server",
-        executable="map_server",
-        name="map_server",
-        output="screen",
-        parameters=[{'use_sim_time': True},
-                    {"yaml_filename": map_file}]
-    )
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    os.path.join(
+                        get_package_share_directory("setup_gazebo_ias0220"),
+                        "launch",
+                        "gazebo.launch.py"
+                    )
+                ),
+                launch_arguments={
+                    "xacro_file": xacro_file
+                }.items(),
+            ),
 
-    amcl_node = Node(
-        package='nav2_amcl',
-        executable='amcl',
-        name='amcl',
-        output='screen',
-        parameters=[nav2_yaml]
-    )
+            Node(
+                package="nav2_map_server",
+                executable="map_server",
+                name="map_server",
+                output="screen",
+                parameters=[{'use_sim_time': True},
+                            {"yaml_filename": map_file}]
+            ),
 
-    lifecycle_manager = Node(
-        package='nav2_lifecycle_manager',
-        executable='lifecycle_manager',
-        name='lifecycle_manager_localization',
-        output='screen',
-        parameters=[{'use_sim_time': True},
-                    {'autostart': True},
-                    {'node_names': ['map_server', 'amcl']}]
-    )
+            Node(
+                package='nav2_amcl',
+                executable='amcl',
+                name='amcl',
+                output='screen',
+                parameters=[nav2_yaml]
+            ),
 
-    static_transform = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="map_to_odom_broadcaster",
-        output="screen",
-        arguments=['0', '0', '0', '0', '0', '0', 'odom', 'map']
+            Node(
+                package='nav2_lifecycle_manager',
+                executable='lifecycle_manager',
+                name='lifecycle_manager_localization',
+                output='screen',
+                parameters=[{'use_sim_time': True},
+                            {'autostart': True},
+                            {'node_names': ['map_server', 'amcl']}]
+            ),
+
+            Node(
+                package="tf2_ros",
+                executable="static_transform_publisher",
+                name="map_to_odom_broadcaster",
+                output="screen",
+                arguments=['0', '0', '0', '0', '0', '0', 'odom', 'map']
+            ),
+        ]
     )
 
     return LaunchDescription(
         [
-            control_node,
-            gazebo_launch,
             rviz_node,
-            static_transform,
-            map_server,
-            amcl_node,
-            lifecycle_manager
+            delayedNodes
         ]
     )
