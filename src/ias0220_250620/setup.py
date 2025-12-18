@@ -40,7 +40,8 @@ setup(
             'image_publish_node = ias0220_250620.image_publisher:main',
             'camera_calibration = ias0220_250620.camera_calibration:main',
             'object_recognition = ias0220_250620.object_recognition:main',
-            'control_node = ias0220_250620.simple_control:main'
+            'control_node = ias0220_250620.simple_control:main',
+            'task9_control = ias0220_250620.task9_move_backoff:main'
         ],
     },
 )
